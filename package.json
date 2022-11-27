@@ -1,39 +1,28 @@
 {
-  "name": "website",
-  "version": "0.1.0",
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "postinstall": "prisma generate",
-    "lint": "next lint",
-    "start": "next start"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@prisma/client": "^4.5.0",
-    "@tanstack/react-query": "^4.16.0",
-    "@trpc/client": "^10.0.0",
-    "@trpc/next": "^10.0.0",
-    "@trpc/react-query": "^10.0.0",
-    "@trpc/server": "^10.0.0",
-    "next": "13.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "superjson": "1.9.1",
-    "zod": "^3.18.0"
+    "@astrojs/react": "^1.2.2",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "astro": "^1.6.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "^18.0.5",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0",
-    "eslint": "^8.26.0",
-    "eslint-config-next": "13.0.2",
-    "prisma": "^4.5.0",
-    "typescript": "^4.8.4"
-  },
-  "ct3aMetadata": {
-    "initVersion": "6.10.2"
+    "@iconify-json/carbon": "^1.1.11",
+    "@iconify-json/mdi": "^1.1.36",
+    "@unocss/preset-icons": "^0.46.5",
+    "@unocss/reset": "^0.46.5",
+    "unocss": "^0.46.5"
   }
 }
