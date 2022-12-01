@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 const Menu = () => {
-  const [open, setOpen] = useState<boolean>(true);
+  const [open, setOpen] = useState<boolean>(false);
   const [discord, setDiscord] = useState<boolean>(false);
   const [email, setEmail] = useState<boolean>(false);
 
