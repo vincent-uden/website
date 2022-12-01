@@ -49,6 +49,29 @@ import Menu from "../components/Menu";
         -moz-box-shadow: 22px 1px 23px -1px rgba(0,0,0,0.2);
       }
 
+      .shadow-popup {
+        box-shadow: 1px 1px 9px 4px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 1px 1px 9px 4px rgba(0,0,0,0.3);
+        -moz-box-shadow: 1px 1px 9px 4px rgba(0,0,0,0.3);
+      }
+
+      .show-popup {
+          animation-name: popup;
+          animation-duration: 2s;
+      }
+
+      @keyframes popup {
+          0% {
+              opacity: 1;
+          }
+          50% {
+              opacity: 1;
+          }
+          100% {
+              opacity: 0;
+          }
+      }
+
       @font-face {
           font-family: "Geometos";
           src: url('/font/Geometos.ttf') format("truetype");
