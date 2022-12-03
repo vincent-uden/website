@@ -12,8 +12,10 @@ const Menu = () => {
 
     popup.classList.add("show-popup");
 
-    setTimeout(() => {popup.classList.remove("show-popup")}, 2000);
-  }
+    setTimeout(() => {
+      popup.classList.remove("show-popup");
+    }, 2000);
+  };
 
   return (
     <div className="fixed top-0 left-0 h-full">
@@ -53,7 +55,10 @@ const Menu = () => {
               className="inline-block relative mx-8"
               onMouseEnter={() => setDiscord(true)}
               onMouseLeave={() => setDiscord(false)}
-              onClick={() => {navigator.clipboard.writeText("Vincent Udén#4873"); openPopup()}}
+              onClick={() => {
+                navigator.clipboard.writeText("Vincent Udén#4873");
+                openPopup();
+              }}
             >
               <div className="i-carbon-logo-discord w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
               <div
@@ -70,7 +75,10 @@ const Menu = () => {
               className="inline-block relative"
               onMouseEnter={() => setEmail(true)}
               onMouseLeave={() => setEmail(false)}
-              onClick={() => {navigator.clipboard.writeText("vincentuden@gmail.com"); openPopup()}}
+              onClick={() => {
+                navigator.clipboard.writeText("vincentuden@gmail.com");
+                openPopup();
+              }}
             >
               <div className="i-mdi-alternate-email w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
               <div
@@ -102,7 +110,9 @@ const Menu = () => {
       </nav>
 
       <div className="fixed left-50vw bottom-10 z-40 opacity-0" ref={popupRef}>
-        <p className="-translate-x-1/2 bg-slate-dark shadow-popup text-pale-grey p-4 text-xl rounded-4">Copied to clipboard</p>
+        <p className="-translate-x-1/2 bg-slate-dark shadow-popup text-pale-grey p-4 text-xl rounded-4">
+          Copied to clipboard
+        </p>
       </div>
     </div>
   );
