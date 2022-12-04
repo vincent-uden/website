@@ -1,5 +1,3 @@
-main * {
-}
 .panel {
   box-shadow: 8px 8px 16px #2a2c2f, -8px -8px 16px #46494e;
 }
@@ -49,11 +47,11 @@ main * {
   font-display: swap;
 }
 
-h1 {
+main h1 {
   @apply font-geo text-pale-grey text-6xl -translate-x-1 mb-8;
 }
 
-h2 {
+main h2 {
   @apply font-gothic text-pale-grey text-4xl -translate-x-1 mb-4 mt-8 flex items-end;
 }
 
@@ -67,11 +65,11 @@ h2:after {
     @apply bg-slate-dark;
 }
 
-h3 {
+main h3 {
   @apply font-gothic text-pale-grey text-2xl -translate-x-1 mb-4 mt-8;
 }
 
-p {
+main p {
   @apply font-gothic text-pale-grey text-xl mb-4;
 }
 
