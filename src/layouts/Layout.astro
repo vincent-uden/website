@@ -9,6 +9,7 @@ import "uno.css";
 import "@unocss/reset/tailwind.css";
 
 import Menu from "../components/Menu";
+import ContactIcons from "../components/ContactIcons";
 ---
 
 <!DOCTYPE html>
@@ -21,71 +22,85 @@ import Menu from "../components/Menu";
     <title>{title}</title>
   </head>
   <body class="dark:bg-onyx min-h-screen">
-    <div class="fixed -top-28 left-50 border-pale-grey border-3 w-220 h-220 rounded-full -z-10 opacity-20"></div>
-    <div class="fixed -top-40 left-48 border-pale-grey border-3 w-180 h-180 rounded-full -z-10 opacity-20"></div>
-    <div class="fixed top-42 left-218 border-pale-grey border-3 w-20 h-20 rounded-full -z-10 opacity-90"></div>
-    <div class="fixed top-183 left-180 border-pale-grey border-3 w-12 h-12 rounded-full -z-10 opacity-90"></div>
+    <div
+      class="fixed -top-28 left-50 border-pale-grey border-3 w-220 h-220 rounded-full -z-10 opacity-20"
+    >
+    </div>
+    <div
+      class="fixed -top-40 left-48 border-pale-grey border-3 w-180 h-180 rounded-full -z-10 opacity-20"
+    >
+    </div>
+    <div
+      class="fixed top-42 left-218 border-pale-grey border-3 w-20 h-20 rounded-full -z-10 opacity-70"
+    >
+    </div>
+    <div
+      class="fixed top-183 left-180 border-pale-grey border-3 w-12 h-12 rounded-full -z-10 opacity-70"
+    >
+    </div>
 
     <main class="w-screen-md ml-140 pt-92 z-10">
       <slot />
+      <div class="h-32"></div>
+      <ContactIcons client:load />
     </main>
 
-
     <div class="h-32"></div>
+
+    <div></div>
 
     <Menu client:load />
 
     <style is:global>
       main * {
-          z-index: 10;
       }
       .panel {
         box-shadow: 8px 8px 16px #2a2c2f, -8px -8px 16px #46494e;
       }
 
       .shadow-menu {
-        box-shadow: 22px 1px 23px -1px rgba(0,0,0,0.2);
-        -webkit-box-shadow: 22px 1px 23px -1px rgba(0,0,0,0.2);
-        -moz-box-shadow: 22px 1px 23px -1px rgba(0,0,0,0.2);
+        box-shadow: 22px 1px 23px -1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 22px 1px 23px -1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 22px 1px 23px -1px rgba(0, 0, 0, 0.2);
       }
 
       .shadow-popup {
-        box-shadow: 1px 1px 9px 4px rgba(0,0,0,0.3);
-        -webkit-box-shadow: 1px 1px 9px 4px rgba(0,0,0,0.3);
-        -moz-box-shadow: 1px 1px 9px 4px rgba(0,0,0,0.3);
+        box-shadow: 1px 1px 9px 4px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 1px 1px 9px 4px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 1px 1px 9px 4px rgba(0, 0, 0, 0.3);
       }
 
       .show-popup {
-          animation-name: popup;
-          animation-duration: 2s;
+        animation-name: popup;
+        animation-duration: 2s;
       }
 
       @keyframes popup {
-          0% {
-              opacity: 1;
-          }
-          50% {
-              opacity: 1;
-          }
-          100% {
-              opacity: 0;
-          }
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
       }
 
       @font-face {
-          font-family: "Geometos";
-          src: url('/font/Geometos.ttf') format("truetype");
-          font-weight: normal;
-          font-style: normal;
-          font-display: swap;
+        font-family: "Geometos";
+        src: url("/font/Geometos.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
       }
 
       @font-face {
-          font-family: "Century Gothic";
-          src: url('/font/CenturyGothic.ttf') format("truetype");
-          font-weight: normal;
-          font-style: normal;
-          font-display: swap;
+        font-family: "Century Gothic";
+        src: url("/font/CenturyGothic.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
       }
     </style>
   </body>

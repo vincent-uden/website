@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 
 import Unocss from "unocss/vite";
-import { presetWebFonts, presetWind, presetMini, presetIcons } from "unocss";
+import { presetWebFonts, presetWind, presetMini, presetIcons, transformerDirectives } from "unocss";
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -23,6 +23,7 @@ export default defineConfig({
             slateBlue: "#8C9DBF",
             slateDark: "#5B647B",
             darkGrey: "#383A3E",
+            darkerGrey: "#202125bb",
           },
         },
         presets: [
@@ -37,6 +38,9 @@ export default defineConfig({
               gothic: ["Century Gothic", "Roboto"],
             },
           }),
+        ],
+        transformers: [
+            transformerDirectives(),
         ],
       }),
     ],
