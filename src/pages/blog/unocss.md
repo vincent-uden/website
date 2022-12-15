@@ -3,7 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: UnoCss
 preview: UnoCSS is an atomic css engine which enables a different workflow for writing css, avoiding the hassles of semantic styling. For those familiar with TailwindCSS...
 date: 4th of december 2022
-time: 8:00 am
+time: "8:00"
 timestamp: 1670137200
 ---
 
