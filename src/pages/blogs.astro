@@ -23,6 +23,7 @@ console.log(posts);
 
   {
     posts.map((post) => {
+      if (post.frontmatter.draft != true) {
       return (
         <>
           <a href={post.url}>
@@ -46,6 +47,9 @@ console.log(posts);
         {/* TODO: Implement sidebar when there is a greater backlog of blogs */}
         </>
       );
+      } else {
+          return (<> </>);
+      }
     })
   }
 </Layout>
