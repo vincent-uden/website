@@ -20,9 +20,9 @@ const ContactIcons = () => {
     <>
       <div className="w-fit mx-auto">
         <a href="https://github.com/vincent-uden" className="bg-dark-grey">
-        <div className="w-32 h-32 inline-block drop-shadow-xl">
-          <div className="i-mdi-github w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
-</div>
+          <div className="w-32 h-32 inline-block drop-shadow-xl">
+            <div className="i-mdi-github w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+          </div>
         </a>
         <div
           className="inline-block relative mx-8 drop-shadow-xl"
@@ -65,7 +65,10 @@ const ContactIcons = () => {
           </div>
         </div>
       </div>
-      <div className="fixed left-50vw bottom-10 opacity-0 pointer-events-none" ref={popupRef}>
+      <div
+        className="fixed left-50vw bottom-10 opacity-0 pointer-events-none"
+        ref={popupRef}
+      >
         <p className="-translate-x-1/2 bg-slate-dark shadow-popup text-pale-grey p-4 text-xl rounded-4">
           Copied to clipboard
         </p>
