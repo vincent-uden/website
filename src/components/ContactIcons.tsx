@@ -20,8 +20,8 @@ const ContactIcons = () => {
     <>
       <div className="w-fit mx-auto">
         <a href="https://github.com/vincent-uden" className="bg-dark-grey">
-        <div className="w-32 h-32 inline-block drop-shadow-xl">
-          <div className="i-mdi-github w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+        <div className="w-24 h-24 inline-block drop-shadow-xl">
+          <div className="i-mdi-github w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
 </div>
         </a>
         <div
@@ -33,7 +33,7 @@ const ContactIcons = () => {
             openPopup();
           }}
         >
-          <div className="i-carbon-logo-discord w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+          <div className="i-carbon-logo-discord w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
           <div
             className={`absolute bottom-full left-0 pointer-events-none ${
               discord ? "opacity-100" : "opacity-0"
@@ -53,7 +53,7 @@ const ContactIcons = () => {
             openPopup();
           }}
         >
-          <div className="i-mdi-alternate-email w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+          <div className="i-mdi-alternate-email w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
           <div
             className={`absolute bottom-full left-0 pointer-events-none ${
               email ? "opacity-100" : "opacity-0"

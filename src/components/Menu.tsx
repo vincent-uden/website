@@ -18,38 +18,39 @@ const Menu = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 h-full">
+    <>
+    <div className="fixed top-0 left-0 h-full pointer-events-none">
       <nav
         className={`bg-pale-grey flex flex-row h-full z-20 left-0 relative ${
           open ? "translate-x-0" : "-translate-x-full"
         } transition-transform shadow-2xl`}
       >
-        <div className="bg-pale-grey h-full w-32 overflow-x-visible">
-          <div className="pl-24 py-16">
+        <div className="bg-pale-grey h-full w-32 overflow-x-visible w-fit">
+          <div className="pl-16 pt-48 sm:pt-16">
             <a href="/">
-              <p className="text-slate-dark text-6xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors">
+              <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
                 HOME
               </p>
             </a>
             <a href="/blogs" className="z-40">
-              <p className="text-slate-dark text-6xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors">
+              <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
                 BLOG ARCHIVE
               </p>
             </a>
             <a href="/projects">
-              <p className="text-slate-dark text-6xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors">
+              <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
                 PROJECTS
               </p>
             </a>
             <a href="/faq">
-              <p className="text-slate-dark text-6xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors">
+              <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
                 FAQ
               </p>
             </a>
           </div>
-          <div className="absolute bottom-24 left-24">
-            <a href="https://github.com/vincent-uden">
-              <div className="i-mdi-github w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+          <div className="absolute bottom-24 left-20">
+            <a href="https://github.com/vincent-uden" className="pointer-events-initial">
+              <div className="i-mdi-github w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
             </a>
             <div
               className="inline-block relative mx-8"
@@ -60,7 +61,7 @@ const Menu = () => {
                 openPopup();
               }}
             >
-              <div className="i-carbon-logo-discord w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+              <div className="i-carbon-logo-discord w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
               <div
                 className={`absolute bottom-full left-0 pointer-events-none ${
                   discord ? "opacity-100" : "opacity-0"
@@ -80,7 +81,7 @@ const Menu = () => {
                 openPopup();
               }}
             >
-              <div className="i-mdi-alternate-email w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+              <div className="i-mdi-alternate-email w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
               <div
                 className={`absolute bottom-full left-0 pointer-events-none z-40 ${
                   email ? "opacity-100" : "opacity-0"
@@ -93,7 +94,8 @@ const Menu = () => {
             </div>
           </div>
         </div>
-        <div className="translate-x-full w-fit h-full overflow-x-visible shadow-menu">
+        {/* Make this bg slate-dark for mobile */}
+        <div className={`${open ? "sm:translate-x-0" : "sm:translate-x-full"} transition-transform w-fit h-full overflow-x-visible shadow-menu pointer-events-none sm:pointer-events-initial`}>
           <div className="bg-pale-grey w-58 h-full inline-block z-20" />
           <div className="bg-slate-dark w-32 h-full inline-block z-20" />
           <div
@@ -101,7 +103,7 @@ const Menu = () => {
             onClick={() => setOpen(!open)}
           >
             <div
-              className={`i-bi-chevron-double-left text-pale-grey w-16 h-full m-auto scale-x-100 ${
+              className={`i-bi-chevron-double-left text-pale-grey w-16 h-full m-auto scale-x-100 hidden sm:block ${
                 open ? "rotate-0" : "rotate-180"
               } transition-transform`}
             />
@@ -114,7 +116,12 @@ const Menu = () => {
           Copied to clipboard
         </p>
       </div>
+
     </div>
+      <div className="fixed top-12 right-8 z-40" onClick={() => setOpen(!open)}>
+        <div className={`i-mdi-menu w-16 h-16 ${open ? "text-slate-dark" : "text-pale-grey"} transition-colors`} />
+      </div>
+      </>
   );
 };
 

@@ -39,7 +39,7 @@ import ContactIcons from "../components/ContactIcons";
     >
     </div>
 
-    <main class="w-screen-md ml-140 pt-92 z-10">
+    <main class="w-screen-md px-16 sm:px-0 sm:ml-140 pt-92 z-10">
       <slot />
       <div class="h-32"></div>
       <ContactIcons client:load />
@@ -52,8 +52,6 @@ import ContactIcons from "../components/ContactIcons";
     <Menu client:load />
 
     <style is:global>
-      main * {
-      }
       .panel {
         box-shadow: 8px 8px 16px #2a2c2f, -8px -8px 16px #46494e;
       }
