@@ -56,16 +56,20 @@ main h2 {
 }
 
 h2:after {
-    content: '';
-    height: 0.3rem;
-    transform: translateY(-0.4rem);
-    margin-left: 1rem;
-    flex: 1;
+  content: "";
+  height: 0.3rem;
+  transform: translateY(-0.4rem);
+  margin-left: 1rem;
+  flex: 1;
 
-    @apply bg-slate-dark;
+  @apply bg-slate-dark;
 }
 
 main h3 {
+  @apply font-gothic text-pale-grey text-3xl -translate-x-1 mb-4 mt-8;
+}
+
+main h4 {
   @apply font-gothic text-pale-grey text-2xl -translate-x-1 mb-4 mt-8;
 }
 
@@ -82,9 +86,9 @@ code {
 }
 
 .astro-code {
-  @apply !bg-darker-grey p-2 mb-4 border-2 border-slate-dark shadow-lg;
+  @apply !bg-darker-grey p-2 mb-4 border-2 border-slate-dark shadow-lg scrollbar scrollbar-track-color-transparent scrollbar-thumb-color-slate-dark;
 }
 
-.astro-code>code {
-    background-color: transparent;
+.astro-code > code {
+  background-color: transparent;
 }

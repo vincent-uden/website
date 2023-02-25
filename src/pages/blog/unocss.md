@@ -3,7 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: UnoCss
 preview: UnoCSS is an atomic css engine which enables a different workflow for writing css, avoiding the hassles of semantic styling. For those familiar with TailwindCSS...
 date: 4th of december 2022
-time: 8:00 am
+time: "8:00"
 timestamp: 1670137200
 ---
 
@@ -22,6 +22,7 @@ Switching out one atomic CSS system for another identical one doesn't seem very 
 ### [@unocss/preset-wind](https://github.com/unocss/unocss/tree/main/packages/preset-wind)
 
 This is the one we've mentioned already which gives us the Tailwind rules with some extra spice added.
+
 ### [@unocss/preset-reset](https://www.npmjs.com/package/@unocss/reset)
 
 This preset contains different stylesheets for normalising the CSS before doing your own styling. Setting all margins to 0, padding to 0, removing colouring from anchor elements and lots more. Exactly how the styling is normalised depends on which specific sheet you decide to use, but the idea is the same for all of them.
@@ -29,11 +30,13 @@ This preset contains different stylesheets for normalising the CSS before doing 
 ### [@unocss/transformer-directives](https://github.com/unocss/unocss/tree/main/packages/transformer-directives)
 
 Tired of repeating classes for many elements using the same styling? This preset helps out with that exact problem by providing a shorthand for applying rules in a CSS stylesheet while still using the classes one would use in the HTML tags. For example:
-```
+
+```css
 h2 {
   @apply font-gothic text-pale-grey text-4xl -translate-x-1 mb-4 mt-8;
 }
 ```
+
 Would apply all those rules onto all h2 elements. This is a feature I rarely use, but sometimes it comes in handy, such as when styling Markdown files like the one you're reading right now. In fact, this exact code snippet is what's used to render the headers on this page.
 
 ### [@unocss/preset-icons](https://github.com/unocss/unocss/tree/main/packages/preset-icons)

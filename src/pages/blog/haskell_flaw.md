@@ -3,7 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: Haskell's Fatal Flaw
 preview: There are over 25 million software developers all over the world right now. Every single one of them has their own preferences about what they want in a programming language. Not too surprisingly ...
 date: 24th of july 2020
-time: 11:00 pm
+time: "23:00"
 timestamp: 1595624400
 ---
 
@@ -19,6 +19,6 @@ The Glasgow Haskell Compiler's interpreter mode is by far the best interactive p
 
 ## Just Sandbox It, Right?
 
-With all this said, both Rust and JavaScript sit comfortably in the top 20 most used programming languages. Haskell is all the way down at 40 under D, COBOL, Delphi. How can this be? As always it's a multitude of reasons that together decide a language's popularity. But the biggest reason for me personally is the tooling. Even though it's fantastic in all the ways I described, it's slow as hell. Not only is everything so slow, the disk space usage is through the roof. Each project requires a separate installation of the *entire* compiler. The GHC isn't a small piece of software either. It's about a 300Mb installation for every single project on your system. Of course this data has to be downloaded every single time. Good luck if you happen to catch a wind of inspiration while you're without internet, or on a mobile connection.
+With all this said, both Rust and JavaScript sit comfortably in the top 20 most used programming languages. Haskell is all the way down at 40 under D, COBOL, Delphi. How can this be? As always it's a multitude of reasons that together decide a language's popularity. But the biggest reason for me personally is the tooling. Even though it's fantastic in all the ways I described, it's slow as hell. Not only is everything so slow, the disk space usage is through the roof. Each project requires a separate installation of the _entire_ compiler. The GHC isn't a small piece of software either. It's about a 300Mb installation for every single project on your system. Of course this data has to be downloaded every single time. Good luck if you happen to catch a wind of inspiration while you're without internet, or on a mobile connection.
 
 This is the constant itch that prevents me from using Haskell more often. Starting a new project in Haskell is a chore, it's frustrating and it's painfully cumbersome. It's a shame. A wonderful language with ingenious tooling, all ruined by a clunky package manager.

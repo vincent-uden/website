@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 
 import Unocss from "unocss/vite";
 import { presetWebFonts, presetWind, presetMini, presetIcons, transformerDirectives } from "unocss";
+import { presetScrollbar } from "unocss-preset-scrollbar";
 
 // https://astro.build/config
 import react from "@astrojs/react";
@@ -38,6 +39,7 @@ export default defineConfig({
               gothic: ["Century Gothic", "Roboto"],
             },
           }),
+          presetScrollbar({}),
         ],
         transformers: [
             transformerDirectives(),
