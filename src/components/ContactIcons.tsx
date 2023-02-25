@@ -20,8 +20,8 @@ const ContactIcons = () => {
     <>
       <div className="w-fit mx-auto">
         <a href="https://github.com/vincent-uden" className="bg-dark-grey">
-          <div className="w-32 h-32 inline-block drop-shadow-xl">
-            <div className="i-mdi-github w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+          <div className="w-24 h-24 inline-block drop-shadow-xl">
+            <div className="i-mdi-github w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
           </div>
         </a>
         <div
@@ -33,13 +33,13 @@ const ContactIcons = () => {
             openPopup();
           }}
         >
-          <div className="i-carbon-logo-discord w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+          <div className="i-carbon-logo-discord w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
           <div
             className={`absolute bottom-full left-0 pointer-events-none ${
               discord ? "opacity-100" : "opacity-0"
             } transition-opacity`}
           >
-            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-52 -left-10 text-center">
+            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-52 -left-12 text-center">
               Vincent Udén#4873
             </p>
           </div>
@@ -53,13 +53,13 @@ const ContactIcons = () => {
             openPopup();
           }}
         >
-          <div className="i-mdi-alternate-email w-32 h-32 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+          <div className="i-mdi-alternate-email w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
           <div
             className={`absolute bottom-full left-0 pointer-events-none ${
               email ? "opacity-100" : "opacity-0"
             } transition-opacity`}
           >
-            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-60 -left-10 text-center">
+            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-60 -left-16 text-center">
               vincentuden@gmail.com
             </p>
           </div>
