@@ -39,7 +39,7 @@ const ContactIcons = () => {
               discord ? "opacity-100" : "opacity-0"
             } transition-opacity`}
           >
-            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-52 -left-10 text-center">
+            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-52 -left-12 text-center">
               Vincent Udén#4873
             </p>
           </div>
@@ -59,13 +59,13 @@ const ContactIcons = () => {
               email ? "opacity-100" : "opacity-0"
             } transition-opacity`}
           >
-            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-60 -left-10 text-center">
+            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-60 -left-16 text-center">
               vincentuden@gmail.com
             </p>
           </div>
         </div>
       </div>
-      <div className="fixed left-50vw bottom-10 opacity-0 pointer-events-none" ref={popupRef}>
+      <div className="fixed left-1/2 bottom-10 opacity-0 pointer-events-none" ref={popupRef}>
         <p className="-translate-x-1/2 bg-slate-dark shadow-popup text-pale-grey p-4 text-xl rounded-4">
           Copied to clipboard
         </p>
