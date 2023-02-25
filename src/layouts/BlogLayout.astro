@@ -43,18 +43,17 @@ import ContactIcons from "../components/ContactIcons";
     <main class="w-screen-sm lg:w-screen-md mx-auto px-16 mt-44 z-10">
       <h1 class="">{frontmatter.title}</h1>
       <div class="flex flex-row px-2">
-      <p class="grow">{frontmatter.date}</p>
-      <p class="">{frontmatter.time}</p>
+        <p class="grow">{frontmatter.date}</p>
+        <p class="">{frontmatter.time}</p>
       </div>
       <div class="bg-darker-grey p-8">
         <slot />
       </div>
-    <div class="h-32"></div>
-    <ContactIcons client:load />
+      <div class="h-32"></div>
+      <ContactIcons client:load />
     </main>
 
     <div class="h-32"></div>
-
 
     <Menu client:load />
   </body>

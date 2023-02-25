@@ -74,7 +74,7 @@ main h4 {
 }
 
 main p {
-  @apply font-gothic text-pale-grey text-xl mb-4;
+  @apply font-gothic text-pale-grey text-lg mb-4;
 }
 
 main a {

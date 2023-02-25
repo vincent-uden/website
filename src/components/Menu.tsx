@@ -55,9 +55,16 @@ const Menu = () => {
           </nav>
         </div>
         <div className="bg-pale-grey sm:bg-slate-blue lg:bg-slate-dark w-32 h-full inline absolute top-0 -right-32 "></div>
-        <div className="bg-slate-blue w-24 h-full absolute top-0 -right-56 hidden lg:inline" onClick={() => setOpen(!open)}>
-          <div className="grid h-full justify-items-center items-center" >
-            <div className={`i-mdi-chevron-double-right w-24 h-24 text-pale-grey ${open ? "rotate-180" : "rotate-0"} transition-transform`} />
+        <div
+          className="bg-slate-blue w-24 h-full absolute top-0 -right-56 hidden lg:inline"
+          onClick={() => setOpen(!open)}
+        >
+          <div className="grid h-full justify-items-center items-center">
+            <div
+              className={`i-mdi-chevron-double-right w-24 h-24 text-pale-grey ${
+                open ? "rotate-180" : "rotate-0"
+              } transition-transform`}
+            />
           </div>
         </div>
       </div>
