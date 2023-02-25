@@ -2,9 +2,9 @@
 layout: ../../layouts/BlogLayout.astro
 title: Git Gud
 preview: Git has a rumor of being complicated and difficult to understand. Some parts of the program can be enigmantic but the vast majority of day-to-day usage is very simple...
-date: 25th of februar 2023
-time: "11:33"
-timestamp: 1677321220
+date: 25th of february 2023
+time: "18:55"
+timestamp: 1677348241
 ---
 
 Git has a rumor of being complicated and difficult to understand. Some parts of the program can be enigmantic but the vast majority of day-to-day usage is very simple. What follows is a guide to how I use git while developing. It is not a complete guide to all features of the version control system and that is not what it's meant to be. There are developers who're magicians in the deep depths of git, I'm not one of those. For the purposes of this guide I am to be pragmatic and cover 99% of what I've ever done using git, mostly since I can't ever seem to remember the more obscure parts myself.
