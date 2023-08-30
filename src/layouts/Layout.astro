@@ -10,6 +10,7 @@ import "@unocss/reset/tailwind.css";
 
 import Menu from "../components/Menu";
 import ContactIcons from "../components/ContactIcons";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ import ContactIcons from "../components/ContactIcons";
     <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions/>
   </head>
   <body class="dark:bg-onyx min-h-screen">
     <div
