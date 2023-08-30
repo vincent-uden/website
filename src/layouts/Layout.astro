@@ -5,7 +5,6 @@ export interface Props {
 
 const { title } = Astro.props;
 
-import "uno.css";
 import "@unocss/reset/tailwind.css";
 
 import Menu from "../components/Menu";
@@ -103,5 +102,7 @@ import { ViewTransitions } from "astro:transitions";
         font-display: swap;
       }
     </style>
+
+    <script>import 'uno.css'</script>
   </body>
 </html>
