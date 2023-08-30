@@ -5,7 +5,6 @@ export interface Props {
 
 const { title, frontmatter } = Astro.props;
 
-import "uno.css";
 import "@unocss/reset/tailwind.css";
 import "../styles/markdown_style.css";
 
