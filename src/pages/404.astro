@@ -1,8 +1,4 @@
 ---
-//import "uno.css";
-import "@unocss/reset/tailwind.css";
-
-import "uno.css";
 import ContactIcons from "../components/ContactIcons";
 import Menu from "../components/Menu";
 import { ViewTransitions } from "astro:transitions";
@@ -17,25 +13,26 @@ import { ViewTransitions } from "astro:transitions";
     <title>Vincent / 404</title>
     <ViewTransitions/>
   </head>
-  <body class="dark:bg-onyx min-h-screen">
+  <body class="bg-onyx min-h-screen">
     <div
-      class="fixed -top-28 left-50 border-pale-grey/20 border-3 w-220 h-220 rounded-full -z-10 rotating-ring animation-36"
+      class="fixed -top-28 left-[12.5rem] border-pale-grey/20 border-[3px] w-[55rem] h-[55rem] rounded-full -z-10 rotating-ring animation-36"
     >
     <div
-      class="absolute top-104 -right-6 border-pale-grey border-3 w-12 h-12 rounded-full -z-10 opacity-70"
+      class="absolute top-[26rem] -right-6 border-pale-grey border-[3px] w-12 h-12 rounded-full -z-10 opacity-70"
     >
     </div>
     </div>
     <div
-      class="fixed -top-40 left-48 border-pale-grey/20 border-3 w-180 h-180 rounded-full -z-10 rotating-ring animation-20"
+      class="fixed -top-40 left-48 border-pale-grey/20 border-[3px] w-[45rem] h-[45rem] rounded-full -z-10 rotating-ring animation-20"
     >
       <div
-        class="absolute top-80 -right-10 border-pale-grey border-3 w-20 h-20 rounded-full -z-10 opacity-70"
+        class="absolute top-80 -right-10 border-pale-grey border-[3px] w-20 h-20 rounded-full -z-10 opacity-70"
       >
       </div>
     </div>
 
-    <main class="w-screen-sm px-16 xl:px-0 pt-92 z-10 mx-auto">
+    <main class="max-w-screen-sm px-16 xl:px-0 pt-92 z-10 mx-auto">
+    <div class="h-48 md:h-72" />
       <h1 class="font-geo text-6xl text-pale-grey">404.</h1>
       <div class="h-8"></div>
       <h2 class="font-gothic text-pale-grey text-2xl">This page doesn't exist</h2>

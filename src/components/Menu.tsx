@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import { BsChevronDoubleRight } from "react-icons/bs";
+import { BiMenu } from "react-icons/bi";
 
 const Menu = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -31,22 +33,22 @@ const Menu = () => {
             <div className="bg-pale-grey h-full overflow-x-visible w-fit">
               <div className="pl-16 pr-16 pt-48 sm:pt-16">
                 <a href="/">
-                  <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
+                  <p className="text-slate-dark md:text-5xl text-3xl py-4 font-geo whitespace-nowrap hover:text-slate-blue transition-colors pointer-events-initial">
                     HOME
                   </p>
                 </a>
                 <a href="/blogs" className="z-40">
-                  <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
+                  <p className="text-slate-dark md:text-5xl text-3xl py-4 font-geo whitespace-nowrap hover:text-slate-blue transition-colors pointer-events-initial">
                     BLOG ARCHIVE
                   </p>
                 </a>
                 <a href="/projects">
-                  <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
+                  <p className="text-slate-dark md:text-5xl text-3xl py-4 font-geo whitespace-nowrap hover:text-slate-blue transition-colors pointer-events-initial">
                     PROJECTS
                   </p>
                 </a>
                 <a href="/faq">
-                  <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
+                  <p className="text-slate-dark md:text-5xl text-3xl py-4 font-geo whitespace-nowrap hover:text-slate-blue transition-colors pointer-events-initial">
                     FAQ
                   </p>
                 </a>
@@ -61,10 +63,12 @@ const Menu = () => {
         >
           <div className="grid h-full justify-items-center items-center">
             <div
-              className={`i-mdi-chevron-double-right w-24 h-24 text-pale-grey ${
+              className={`flex flex-row justify-center w-24 h-24 text-pale-grey ${
                 open ? "rotate-180" : "rotate-0"
               } transition-transform`}
-            />
+            >
+            <BsChevronDoubleRight size={72} />
+            </div>
           </div>
         </div>
       </div>
@@ -73,10 +77,12 @@ const Menu = () => {
         onClick={() => setOpen(!open)}
       >
         <div
-          className={`i-mdi-menu w-16 h-16 ${
+          className={`w-16 h-16 ${
             open ? "text-slate-dark sm:text-pale-grey" : "text-pale-grey"
           } transition-colors lg:hidden`}
-        />
+        >
+        <BiMenu size={64} />
+        </div>
       </div>
     </>
   );

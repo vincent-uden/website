@@ -1,8 +1,14 @@
 import { useRef, useState } from "react";
+import { BsDiscord, BsGithub } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { IconContext } from "react-icons";
+import { useWindowSize } from "usehooks-ts";
 
 const ContactIcons = () => {
   const [discord, setDiscord] = useState<boolean>(false);
   const [email, setEmail] = useState<boolean>(false);
+
+  const { width, height } = useWindowSize();
 
   const popupRef = useRef<HTMLDivElement | null>(null);
 
@@ -18,52 +24,58 @@ const ContactIcons = () => {
 
   return (
     <>
-      <div className="w-fit mx-auto">
-        <a href="https://github.com/vincent-uden" className="bg-dark-grey">
-          <div className="w-24 h-24 inline-block drop-shadow-xl">
-            <div className="i-mdi-github w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
-          </div>
-        </a>
-        <div
-          className="inline-block relative mx-8 drop-shadow-xl"
-          onMouseEnter={() => setDiscord(true)}
-          onMouseLeave={() => setDiscord(false)}
-          onClick={() => {
-            navigator.clipboard.writeText("Vincent Udén#4873");
-            openPopup();
+      <div className="w-fit mx-auto flex flex-row gap-8">
+        <IconContext.Provider
+          value={{
+            className: "text-slate-dark hover:text-pale-grey transition-colors",
           }}
         >
-          <div className="i-carbon-logo-discord w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
+          <a href="https://github.com/vincent-uden" className="">
+            <div className="md:w-24 md:h-24 inline-block drop-shadow-xl p-[5px]">
+              <BsGithub size={width > 768 ? 86 : 54}/>
+            </div>
+          </a>
           <div
-            className={`absolute bottom-full left-0 pointer-events-none ${
-              discord ? "opacity-100" : "opacity-0"
-            } transition-opacity`}
+            className="inline-block relative drop-shadow-xl"
+            onMouseEnter={() => setDiscord(true)}
+            onMouseLeave={() => setDiscord(false)}
+            onClick={() => {
+              navigator.clipboard.writeText("Vincent Udén#4873");
+              openPopup();
+            }}
           >
-            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-52 -left-12 text-center">
-              Vincent Udén#4873
-            </p>
+            <BsDiscord size={width > 768 ? 96 : 64} />
+            <div
+              className={`absolute bottom-full left-0 pointer-events-none ${
+                discord ? "opacity-100" : "opacity-0"
+              } transition-opacity`}
+            >
+              <p className="text-pale-grey bg-slate-dark py-4 rounded-xl text-lg font-gothic whitespace-nowrap relative w-52 -left-16 md:-left-14 text-center">
+                Vincent Udén#4873
+              </p>
+            </div>
           </div>
-        </div>
-        <div
-          className="inline-block relative drop-shadow-xl"
-          onMouseEnter={() => setEmail(true)}
-          onMouseLeave={() => setEmail(false)}
-          onClick={() => {
-            navigator.clipboard.writeText("vincentuden@gmail.com");
-            openPopup();
-          }}
-        >
-          <div className="i-mdi-alternate-email w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
           <div
-            className={`absolute bottom-full left-0 pointer-events-none ${
-              email ? "opacity-100" : "opacity-0"
-            } transition-opacity`}
+            className="inline-block relative drop-shadow-xl"
+            onMouseEnter={() => setEmail(true)}
+            onMouseLeave={() => setEmail(false)}
+            onClick={() => {
+              navigator.clipboard.writeText("vincentuden@gmail.com");
+              openPopup();
+            }}
           >
-            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-60 -left-16 text-center">
-              vincentuden@gmail.com
-            </p>
+            <MdEmail size={width > 768 ? 96 : 64} />
+            <div
+              className={`absolute bottom-full left-0 pointer-events-none ${
+                email ? "opacity-100" : "opacity-0"
+              } transition-opacity`}
+            >
+              <p className="text-pale-grey bg-slate-dark py-4 rounded-xl text-lg font-gothic whitespace-nowrap relative w-60 -left-32 md:-left-[4.5rem] text-center">
+                vincentuden@gmail.com
+              </p>
+            </div>
           </div>
-        </div>
+        </IconContext.Provider>
       </div>
       <div
         className="fixed left-50vw bottom-10 opacity-0 pointer-events-none"
