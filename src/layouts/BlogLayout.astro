@@ -1,13 +1,15 @@
 ---
 interface Props {
   title: string;
+  frontmatter: any;
 }
 
-const { title } = Astro.props;
+const { title, frontmatter } = Astro.props;
 
 import { ViewTransitions } from "astro:transitions";
 import Menu from "../components/Menu";
 import ContactIcons from "../components/ContactIcons";
+import "../styles/markdown_style.css";
 ---
 
 <!doctype html>
@@ -18,7 +20,7 @@ import ContactIcons from "../components/ContactIcons";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{`Vincent / ${title}`}</title>
+    <title>{`Vincent / ${frontmatter.title}`}</title>
     <ViewTransitions />
   </head>
   <body class="bg-onyx">
@@ -41,12 +43,19 @@ import ContactIcons from "../components/ContactIcons";
 
     <main class="max-w-screen-sm px-16 xl:px-0 z-10 mx-auto">
       <div class="h-48 md:h-72"></div>
-      <slot />
+      <h1 transition:name={`blog-${frontmatter.title}`}>{frontmatter.title}</h1>
+      <div class="flex flex-row px-2">
+        <p class="grow">{frontmatter.date}</p>
+        <p>{frontmatter.time}</p>
+      </div>
+      <div class="bg-darker-grey p-8">
+        <slot />
+      </div>
     </main>
 
     <div class="h-32"></div>
 
-    <div class="fixed top-6 right-4 lg:right-16 lg:top-1/2 lg:-translate-y-1/2">
+    <div class="fixed right-16 top-1/2 -translate-y-1/2">
       <ContactIcons client:load />
     </div>
 

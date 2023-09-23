@@ -21,7 +21,7 @@ export default function Menu() {
               HOME
             </p>
           </a>
-          <a href="/blog">
+          <a href="/blogs">
             <p class="font-geo text-4xl lg:text-5xl text-slate-dark hover:text-slate-blue">
               BLOG ARCHIVE
             </p>
