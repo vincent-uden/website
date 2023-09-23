@@ -1,80 +1,63 @@
-import { useRef, useState } from "react";
+import { AiFillGithub, AiOutlineMail } from "solid-icons/ai";
+import { FaBrandsDiscord } from "solid-icons/fa";
+import { For, Show, createSignal } from "solid-js";
 
-const ContactIcons = () => {
-  const [discord, setDiscord] = useState<boolean>(false);
-  const [email, setEmail] = useState<boolean>(false);
+export default function ContactIcons() {
+  const [hovering, setHovering] = createSignal<number | null>(null);
+  const [copying, setCopying] = createSignal<number | null>(null);
 
-  const popupRef = useRef<HTMLDivElement | null>(null);
+  const contacts = [
+    { icon: FaBrandsDiscord, display: "vincentuden", contact: "vincentuden" },
+    {
+      icon: AiFillGithub,
+      display: "github.com/vincent‑uden",
+      contact: "https://github.com/vincent-uden",
+    },
+    {
+      icon: AiOutlineMail,
+      display: "vincentuden@gmail.com",
+      contact: "vincentuden@gmail.com",
+    },
+  ];
 
-  const openPopup = () => {
-    const popup = popupRef.current!!;
+  function copyToClipboard(text: string, i: number) {
+    navigator.clipboard.writeText(text);
+    setCopying(i);
 
-    popup.classList.add("show-popup");
-
-    setTimeout(() => {
-      popup.classList.remove("show-popup");
-    }, 2000);
-  };
+    setTimeout(() => setCopying(null), 1000);
+  }
 
   return (
-    <>
-      <div className="w-fit mx-auto">
-        <a href="https://github.com/vincent-uden" className="bg-dark-grey">
-          <div className="w-24 h-24 inline-block drop-shadow-xl">
-            <div className="i-mdi-github w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
-          </div>
-        </a>
-        <div
-          className="inline-block relative mx-8 drop-shadow-xl"
-          onMouseEnter={() => setDiscord(true)}
-          onMouseLeave={() => setDiscord(false)}
-          onClick={() => {
-            navigator.clipboard.writeText("Vincent Udén#4873");
-            openPopup();
-          }}
+    <div class="relative flex flex-row justify-center scale-50 lg:scale-100 translate-x-1/4 -translate-y-1/4 lg:translate-x-0 lg:translate-y-0">
+      <div class="flex flex-row lg:flex-col gap-8 justify-around bg-pale-grey rounded-full px-4 py-4 lg:px-4 lg:py-6 shadow-md">
+        <For each={contacts}>
+          {(contact, i) => (
+            <div class="relative">
+              <contact.icon
+                class="text-slate-dark hover:text-slate-blue transition-colors cursor-pointer"
+                onmouseenter={() => setHovering(i)}
+                onmouseleave={() => setHovering(null)}
+                onclick={() => copyToClipboard(contact.contact, i())}
+                size={64}
+              />
+              <p
+                class={`hidden lg:block absolute top-1/2 -translate-y-1/2 -translate-x-8 right-full bg-pale-grey rounded-full px-4 py-2 text-slate-dark font-gothic font-bold transition-opacity w-max ${
+                  hovering() == i() ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                {copying() == i() ? "Copied ✓" : contact.display}
+              </p>
+            </div>
+          )}
+        </For>
+        <p
+          class={`lg:hidden block absolute top-32 translate-x-1/2 right-1/2 bg-pale-grey rounded-full px-4 py-2 text-slate-dark font-gothic font-bold transition-opacity w-max scale-150 ${
+            copying() != null ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <div className="i-carbon-logo-discord w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
-          <div
-            className={`absolute bottom-full left-0 pointer-events-none ${
-              discord ? "opacity-100" : "opacity-0"
-            } transition-opacity`}
-          >
-            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-52 -left-12 text-center">
-              Vincent Udén#4873
-            </p>
-          </div>
-        </div>
-        <div
-          className="inline-block relative drop-shadow-xl"
-          onMouseEnter={() => setEmail(true)}
-          onMouseLeave={() => setEmail(false)}
-          onClick={() => {
-            navigator.clipboard.writeText("vincentuden@gmail.com");
-            openPopup();
-          }}
-        >
-          <div className="i-mdi-alternate-email w-24 h-24 text-slate-dark inline-block @hover-text-slate-blue transition-colors"></div>
-          <div
-            className={`absolute bottom-full left-0 pointer-events-none ${
-              email ? "opacity-100" : "opacity-0"
-            } transition-opacity`}
-          >
-            <p className="text-pale-grey bg-slate-dark py-4 rounded-4 text-lg font-gothic whitespace-nowrap relative w-60 -left-16 text-center">
-              vincentuden@gmail.com
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        className="fixed left-50vw bottom-10 opacity-0 pointer-events-none"
-        ref={popupRef}
-      >
-        <p className="-translate-x-1/2 bg-slate-dark shadow-popup text-pale-grey p-4 text-xl rounded-4">
-          Copied to clipboard
+          Copied ✓
         </p>
       </div>
-    </>
+    </div>
   );
-};
-
-export default ContactIcons;
+}

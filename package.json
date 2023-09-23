@@ -1,33 +1,25 @@
 {
-  "name": "@example/basics",
+  "name": "website",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "dev": "astro dev --host",
-    "start": "astro dev",
+    "start": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^1.2.2",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
-    "astro": "^1.6.11",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@astrojs/solid-js": "^3.0.1",
+    "@astrojs/tailwind": "^5.0.0",
+    "astro": "^3.1.2",
+    "solid-icons": "^1.0.12",
+    "solid-js": "^1.7.12",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@iconify-json/bi": "^1.1.12",
-    "@iconify-json/carbon": "^1.1.11",
-    "@iconify-json/mdi": "^1.1.36",
-    "@unocss/preset-icons": "^0.46.5",
-    "@unocss/reset": "^0.46.5",
-    "@unocss/transformer-directives": "^0.47.5",
-    "prettier": "^2.8.0",
-    "prettier-plugin-astro": "^0.7.0",
-    "unocss": "^0.46.5",
-    "unocss-preset-scrollbar": "^0.2.1"
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
   }
 }

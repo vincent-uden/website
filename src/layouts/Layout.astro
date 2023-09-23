@@ -1,59 +1,61 @@
 ---
-export interface Props {
+interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
 
-import "uno.css";
-import "@unocss/reset/tailwind.css";
-
+import { ViewTransitions } from "astro:transitions";
 import Menu from "../components/Menu";
 import ContactIcons from "../components/ContactIcons";
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{`Vincent / ${title}`}</title>
+    <ViewTransitions />
   </head>
-  <body class="dark:bg-onyx min-h-screen">
+  <body class="bg-onyx">
     <div
-      class="fixed -top-28 left-50 border-pale-grey border-3 w-220 h-220 rounded-full -z-10 opacity-20"
+      class="fixed -top-[7rem] left-[12.5rem] border-pale-grey border-[3px] w-[55rem] h-[55rem] rounded-full -z-10 opacity-20"
     >
     </div>
     <div
-      class="fixed -top-40 left-48 border-pale-grey border-3 w-180 h-180 rounded-full -z-10 opacity-20"
+      class="fixed -top-40 left-48 border-pale-grey border-[3px] w-[45rem] h-[45rem] rounded-full -z-10 opacity-20"
     >
     </div>
     <div
-      class="fixed top-42 left-218 border-pale-grey border-3 w-20 h-20 rounded-full -z-10 opacity-70"
+      class="fixed top-[10.5rem] left-[54.5rem] border-pale-grey border-[3px] w-20 h-20 rounded-full -z-10 opacity-70"
     >
     </div>
     <div
-      class="fixed top-183 left-180 border-pale-grey border-3 w-12 h-12 rounded-full -z-10 opacity-70"
+      class="fixed top-[45.75rem] left-[45rem] border-pale-grey border-[3px] w-12 h-12 rounded-full -z-10 opacity-70"
     >
     </div>
 
-    <main class="w-screen-sm px-16 xl:px-0 pt-92 z-10 mx-auto">
+    <main class="max-w-screen-sm px-16 xl:px-0 z-10 mx-auto">
+      <div class="h-48 md:h-72"></div>
       <slot />
-      <div class="h-32"></div>
-      <ContactIcons client:load />
     </main>
 
     <div class="h-32"></div>
 
-    <div></div>
+    <div class="fixed top-6 right-4 lg:right-16 lg:top-1/2 lg:-translate-y-1/2">
+      <ContactIcons client:load />
+    </div>
 
     <Menu client:load />
-
     <style is:global>
       .panel {
-        box-shadow: 8px 8px 16px #2a2c2f, -8px -8px 16px #46494e;
+        box-shadow:
+          8px 8px 16px #2a2c2f,
+          -8px -8px 16px #46494e;
       }
 
       .shadow-menu {

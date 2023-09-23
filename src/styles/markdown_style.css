@@ -86,7 +86,7 @@ code {
 }
 
 .astro-code {
-  @apply !bg-darker-grey p-2 mb-4 border-2 border-slate-dark shadow-lg scrollbar scrollbar-track-color-transparent scrollbar-thumb-color-slate-dark;
+  @apply !bg-darker-grey p-2 mb-4 border-2 border-slate-dark shadow-lg;
 }
 
 .astro-code > code {

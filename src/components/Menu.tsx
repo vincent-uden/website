@@ -1,85 +1,59 @@
-import { useRef, useState } from "react";
+import { BiRegularChevronsRight, BiRegularMenu } from "solid-icons/bi";
+import { createSignal } from "solid-js";
 
-const Menu = () => {
-  const [open, setOpen] = useState<boolean>(false);
-  const [discord, setDiscord] = useState<boolean>(false);
-  const [email, setEmail] = useState<boolean>(false);
-
-  const popupRef = useRef<HTMLDivElement | null>(null);
-
-  const openPopup = () => {
-    const popup = popupRef.current!!;
-
-    popup.classList.add("show-popup");
-
-    setTimeout(() => {
-      popup.classList.remove("show-popup");
-    }, 2000);
-  };
+export default function Menu() {
+  const [open, setOpen] = createSignal(false);
 
   return (
     <>
       <div
-        className={`fixed top-0 left-0 h-full ${
-          open ? "translate-x-0" : "-translate-x-[200vw] lg:-translate-x-full"
-        } transition-transform`}
+        class={`w-screen lg:w-[50rem] h-screen bg-pale-grey fixed top-0 left-0 transition-transform lg:shadow-menu ${
+          open()
+            ? "translate-x-0"
+            : "-translate-x-[100vw] lg:-translate-x-[calc(55rem-15rem)] xl:-translate-x-[calc(50rem-15rem)]"
+        }`}
       >
-        <div className="inline h-full float-left">
-          <nav
-            className={`bg-pale-grey flex flex-row h-full z-20 left-0 relative ${""} lg:shadow-2xl`}
-          >
-            <div className="bg-pale-grey h-full overflow-x-visible w-fit">
-              <div className="pl-16 pr-16 pt-48 sm:pt-16">
-                <a href="/">
-                  <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
-                    HOME
-                  </p>
-                </a>
-                <a href="/blogs" className="z-40">
-                  <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
-                    BLOG ARCHIVE
-                  </p>
-                </a>
-                <a href="/projects">
-                  <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
-                    PROJECTS
-                  </p>
-                </a>
-                <a href="/faq">
-                  <p className="text-slate-dark text-5xl py-4 font-geo whitespace-nowrap @hover-text-slate-blue transition-colors pointer-events-initial">
-                    FAQ
-                  </p>
-                </a>
-              </div>
-            </div>
-          </nav>
+        <div class="h-32" />
+
+        <div class="flex flex-col gap-4 lg:gap-8 pl-8 lg:pl-16">
+          <a href="/">
+            <p class="font-geo text-4xl lg:text-5xl text-slate-dark hover:text-slate-blue">
+              HOME
+            </p>
+          </a>
+          <a href="/blogs">
+            <p class="font-geo text-4xl lg:text-5xl text-slate-dark hover:text-slate-blue">
+              BLOG ARCHIVE
+            </p>
+          </a>
         </div>
-        <div className="bg-pale-grey sm:bg-slate-blue lg:bg-slate-dark w-32 h-full inline absolute top-0 -right-32 "></div>
-        <div
-          className="bg-slate-blue w-24 h-full absolute top-0 -right-56 hidden lg:inline"
-          onClick={() => setOpen(!open)}
-        >
-          <div className="grid h-full justify-items-center items-center">
-            <div
-              className={`i-mdi-chevron-double-right w-24 h-24 text-pale-grey ${
-                open ? "rotate-180" : "rotate-0"
-              } transition-transform`}
-            />
-          </div>
+
+        <a class="absolute bottom-4 left-8" href="/left-handed">
+          <p class="italic font-gothic text-slate-blue">
+            Why is the menu on the left?
+          </p>
+        </a>
+
+        <div class="absolute top-0 right-24 h-full w-36 bg-slate-dark hidden lg:block" />
+        <div class="absolute top-0 right-0 h-full w-24 bg-slate-blue flex-col items-center justify-center text-pale-grey cursor-pointer hidden lg:flex">
+          <BiRegularChevronsRight
+            class={`transition-transform ${
+              open() ? "rotate-180 -translate-x-1" : "rotate-0 translate-x-1"
+            }`}
+            size={96}
+            onClick={() => setOpen((x) => !x)}
+          />
         </div>
       </div>
+
       <div
-        className="fixed top-12 right-8 z-40 "
-        onClick={() => setOpen(!open)}
+        class={`fixed top-4 left-4 transition-colors drop-shadow-sm lg:hidden cursor-pointer ${
+          open() ? "text-slate-dark" : "text-pale-grey"
+        }`}
+        onClick={() => setOpen((x) => !x)}
       >
-        <div
-          className={`i-mdi-menu w-16 h-16 ${
-            open ? "text-slate-dark sm:text-pale-grey" : "text-pale-grey"
-          } transition-colors lg:hidden`}
-        />
+        <BiRegularMenu size={64} />
       </div>
     </>
   );
-};
-
-export default Menu;
+}

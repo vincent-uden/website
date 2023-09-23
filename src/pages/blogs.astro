@@ -1,6 +1,4 @@
 ---
-const title = "Blog Archive";
-
 import Layout from "../layouts/Layout.astro";
 
 const posts = await Astro.glob("./blog/*.md");
@@ -13,7 +11,6 @@ posts.sort((a, b) => {
 
   return 0;
 });
-console.log(posts);
 ---
 
 <Layout title="Vincent / Blog Archive">
@@ -29,7 +26,7 @@ console.log(posts);
             <a href={post.url}>
               <div class="w-full bg-darker-grey p-4 mb-8 shadow-xl">
                 <div class="bg-slate-dark p-4 mb-2">
-                  <h2 class="m-0">{post.frontmatter.title}</h2>
+                  <h2 transition:name={`blog-${post.frontmatter.title}`} class="m-0">{post.frontmatter.title}</h2>
                 </div>
                 <div class="flex flex-row px-4 mb-2">
                   <p class="font-gothic text-lg grow m-0">
