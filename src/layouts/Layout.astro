@@ -15,9 +15,9 @@ import Menu from "../components/Menu";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{`Vincent / ${title}`}</title>
     <ViewTransitions />
   </head>
   <body class="bg-onyx">
@@ -41,7 +41,6 @@ import Menu from "../components/Menu";
     <main class="max-w-screen-sm px-16 xl:px-0 z-10 mx-auto">
       <div class="h-48 md:h-72"></div>
       <slot />
-      <div class="h-32"></div>
     </main>
 
     <div class="h-32"></div>
