@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: GCC and Circular Dependencies
+title: GCC and Circular Deps
 preview: The Gnu Compiler Collection is somewhat famous for it's atrocious and uninformative error messages, especially when using C++ template functions/containers. One missing semicolon ...
 date: 12th of july 2020
 time: "22:00"

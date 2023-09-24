@@ -41,21 +41,21 @@ import "../styles/markdown_style.css";
     >
     </div>
 
-    <main class="max-w-screen-sm px-16 xl:px-0 z-10 mx-auto">
+    <main class="max-w-screen-sm px-4 lg:px-16 xl:px-0 z-10 mx-auto">
       <div class="h-48 md:h-72"></div>
       <h1 transition:name={`blog-${frontmatter.title}`}>{frontmatter.title}</h1>
       <div class="flex flex-row px-2">
         <p class="grow">{frontmatter.date}</p>
         <p>{frontmatter.time}</p>
       </div>
-      <div class="bg-darker-grey p-8">
+      <div class="bg-darker-grey p-4 lg:p-8">
         <slot />
       </div>
     </main>
 
     <div class="h-32"></div>
 
-    <div class="fixed right-16 top-1/2 -translate-y-1/2">
+    <div class="fixed top-6 right-4 lg:right-16 lg:top-1/2 lg:-translate-y-1/2">
       <ContactIcons client:load />
     </div>
 

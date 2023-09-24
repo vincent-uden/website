@@ -48,7 +48,7 @@
 }
 
 main h1 {
-  @apply font-geo text-pale-grey text-6xl -translate-x-1 mb-8;
+  @apply font-geo text-pale-grey text-5xl lg:text-6xl -translate-x-1 mb-8;
 }
 
 main h2 {
