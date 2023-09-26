@@ -2,7 +2,7 @@
 
 This is the source code for my personal website. It was originally written using Astro 1.6 but and React for some components but I've since moved to Astro 3 with Solidjs for the components.
 
-![img/preview.png](Preview of the website)
+![The preview of the website](img/preview.png)
 
 ## Building and Running
 
