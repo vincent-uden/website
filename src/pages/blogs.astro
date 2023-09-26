@@ -14,7 +14,11 @@ posts.sort((a, b) => {
 ---
 
 <Layout title="Vincent / Blog Archive">
-  <h1 class="font-geo text-5xl lg:text-6xl px-8 lg:px-16 text-pale-grey -translate-x-1">BLOG ARCHIVE.</h1>
+  <h1
+    class="font-geo text-5xl lg:text-6xl px-8 lg:px-16 text-pale-grey -translate-x-1"
+  >
+    BLOG ARCHIVE.
+  </h1>
 
   <div class="h-8"></div>
 
@@ -26,7 +30,12 @@ posts.sort((a, b) => {
             <a href={post.url}>
               <div class="mx-4 bg-darker-grey p-0 lg:p-4 mb-8 shadow-xl">
                 <div class="bg-slate-dark p-4 mb-2">
-                  <h2 transition:name={`blog-${post.frontmatter.title}`} class="m-0">{post.frontmatter.title}</h2>
+                  <h2
+                    transition:name={`blog-${post.frontmatter.title}`}
+                    class="m-0"
+                  >
+                    {post.frontmatter.title}
+                  </h2>
                 </div>
                 <div class="flex flex-row px-4 mb-2">
                   <p class="font-gothic text-lg grow m-0">
@@ -42,7 +51,7 @@ posts.sort((a, b) => {
             </a>
 
             {/* TODO: Implement sidebar when there is a greater backlog of blogs */}
-            <div class="h-16"/>
+            <div class="h-16" />
           </>
         );
       } else {

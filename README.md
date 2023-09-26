@@ -5,4 +5,5 @@ This is the source code for my personal website. It was originally written using
 ![./img/preview.png]
 
 ## Building and Running
-As usual the website is built using `npm run build` and for development server with *HMR* use `npm run dev`. It's a static website with no backend (this is subject to change pretty soon) and as such there are no environment variables to configure.
+
+As usual the website is built using `npm run build` and for development server with _HMR_ use `npm run dev`. It's a static website with no backend (this is subject to change pretty soon) and as such there are no environment variables to configure.

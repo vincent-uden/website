@@ -1,5 +1,7 @@
 .panel {
-  box-shadow: 8px 8px 16px #2a2c2f, -8px -8px 16px #46494e;
+  box-shadow:
+    8px 8px 16px #2a2c2f,
+    -8px -8px 16px #46494e;
 }
 
 .shadow-menu {
