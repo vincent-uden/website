@@ -1,10 +1,8 @@
 import type { APIContext } from "astro";
 
 export async function POST({ request }: APIContext) {
-  console.log("ANALYTICS");
 
   const requestBody = await request.json();
-  console.log(requestBody);
 
   let body = {
     path: requestBody.path ?? "/unknown",
