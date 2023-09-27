@@ -7,12 +7,15 @@ const postBody = {
   path: new URL(document.URL).pathname,
 };
 
-await fetch("/analytics", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(postBody),
+document.addEventListener("astro:after-swap", async () => {
+  await fetch("/analytics", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(postBody),
+  });
 });
+
 
 </script>

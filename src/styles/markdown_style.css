@@ -88,7 +88,7 @@ code {
 }
 
 main img {
-    @apply hover:scale-[200%] transition-transform hover:shadow-lg;
+    @apply hover:scale-[200%] hover:z-10 hover:relative transition-transform hover:shadow-lg;
 }
 
 .astro-code {
