@@ -87,6 +87,10 @@ code {
   @apply bg-darker-grey text-pale-grey;
 }
 
+main img {
+    @apply hover:scale-[200%] transition-transform hover:shadow-lg;
+}
+
 .astro-code {
   @apply !bg-darker-grey p-2 mb-4 border-2 border-slate-dark shadow-lg;
 }
