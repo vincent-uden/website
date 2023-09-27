@@ -28,7 +28,7 @@ export default function Menu() {
           </a>
         </div>
 
-        <a class="absolute bottom-4 left-8" href="/left-handed">
+        <a class="absolute bottom-20 lg:bottom-4 left-8" href="/left-handed">
           <p class="italic font-gothic text-slate-blue">
             Why is the menu on the left?
           </p>
