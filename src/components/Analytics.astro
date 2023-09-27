@@ -7,7 +7,8 @@ const postBody = {
   path: new URL(document.URL).pathname,
 };
 
-document.addEventListener("astro:after-swap", async () => {
+document.addEventListener("astro:page-load", async () => {
+  console.log("after-swap");
   await fetch("/analytics", {
     method: "POST",
     headers: {
