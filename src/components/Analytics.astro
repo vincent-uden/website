@@ -1,26 +1,18 @@
 ---
-console.log(Astro.url);
-console.log(import.meta.env.DEV);
-console.log(import.meta.env.ANALYTICS_PROJECT_ID);
+const url = Astro.url.toString();
+---
 
-let body = {
-  path: Astro.url.pathname,
-  projectId: import.meta.env.ANALYTICS_PROJECT_ID,
-  secret: import.meta.env.ANALYTICS_PROJECT_SECRET,
+<script define:vars={{ url }}>
+const postBody = {
+  path: new URL(url).pathname,
 };
 
-console.log(body);
-
-const resp = await fetch(import.meta.env.ANALYTICS_URL, {
+fetch("/analytics", {
   method: "POST",
-  cache: "no-cache",
   headers: {
     "Content-Type": "application/json",
   },
-  body: JSON.stringify(body),
+  body: JSON.stringify(postBody),
 });
 
-console.log(await resp.text());
-
----
-<div></div>
+</script>
