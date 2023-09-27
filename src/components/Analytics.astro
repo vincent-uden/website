@@ -4,11 +4,12 @@
 
 <script>
 const postBody = {
-  path: new URL(document.URL).pathname,
+  path: new URL(window.location.href).pathname,
 };
 
 document.addEventListener("astro:page-load", async () => {
   console.log("after-swap");
+  console.log(postBody);
   await fetch("/analytics", {
     method: "POST",
     headers: {
