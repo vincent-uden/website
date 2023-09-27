@@ -1,0 +1,26 @@
+---
+console.log(Astro.url);
+console.log(import.meta.env.DEV);
+console.log(import.meta.env.ANALYTICS_PROJECT_ID);
+
+let body = {
+  path: Astro.url.pathname,
+  projectId: import.meta.env.ANALYTICS_PROJECT_ID,
+  secret: import.meta.env.ANALYTICS_PROJECT_SECRET,
+};
+
+console.log(body);
+
+const resp = await fetch(import.meta.env.ANALYTICS_URL, {
+  method: "POST",
+  cache: "no-cache",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(body),
+});
+
+console.log(await resp.text());
+
+---
+<div></div>

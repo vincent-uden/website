@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import { ViewTransitions } from "astro:transitions";
+import Analytics from "../components/Analytics.astro";
 import Menu from "../components/Menu";
 import ContactIcons from "../components/ContactIcons";
 ---
@@ -103,5 +104,7 @@ import ContactIcons from "../components/ContactIcons";
         font-display: swap;
       }
     </style>
+
+    <Analytics />
   </body>
 </html>
