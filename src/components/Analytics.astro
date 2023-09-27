@@ -1,23 +1,21 @@
 ---
-
+const url = Astro.url.toString();
 ---
 
-<script>
+<script define:vars={{ url }}>
+console.log(url);
 const postBody = {
-  path: new URL(window.location.href).pathname,
+  path: new URL(url).pathname,
 };
 
-document.addEventListener("astro:page-load", async () => {
-  console.log("after-swap");
-  console.log(postBody);
-  await fetch("/analytics", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(postBody),
-  });
-});
+console.log(postBody);
 
+fetch("/analytics", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(postBody),
+});
 
 </script>
