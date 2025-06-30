@@ -5,6 +5,8 @@ preview: ...
 date: July 2025
 time: "00:00"
 timestamp: 1750854203
+
+// TODO: Take a picture of the physical grid and insert below
 ---
 
 Since graduating from university I've gotten more and more into embedded software development. This has even spilled over into designing PCBs *(printed circuit boards)* for my embedded devices to sit on.
@@ -29,7 +31,11 @@ The overlapping component usage had left me with no actual idea of my inventory.
 The organisational task of keeping a stock for my designs was a new problem I hadn't considered. If I want to build a version of my latest pdf-reader on a new computer, I just compile it. There's no need to check for complex, interwoven dependencies between it and other software I'd written before constructing the design, in software you can just do it.
 
 ## The solution
+Having the hammer of software development at my disposal, organising electrical components was looking a lot like a nail. The resulting program consists of parts, a panel and a grid.
 
-### Gridfinity
+![A screenshot of the program](/img/pcb_client.png)
 
-### A database
+As the mouse hovers over each electrical part, it's position in the grid is highlighted on the right. *Why a grid? What does it represent?* A physical, 3D-printed grid storage system of course.
+
+![A picture of the physical grid](/img/pcb_client.png) 
+
