@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: PCB Management (DRAFT)
-preview: ...
+title: Open source BOM management
+preview: Since graduating from university I've gotten more and more into embedded software development. This has even spilled over into designing PCBs (printed circuit boards) for my embedded devices...
 date: July 2025
-time: "00:00"
+time: "23:17"
 timestamp: 1750854203
 ---
 
@@ -27,7 +27,7 @@ One day, when I was looking to build `Battery manager V1.2` and was scrambling t
 
 The overlapping component usage had left me with no actual idea of my inventory. There was no way of knowing how many of each circuit design that I could actually build and ordering new parts was just as big of a nightmare since couldn't get a grip on what parts I'd actually need.
 
-The organisational task of keeping a stock for my designs was a new problem I hadn't considered. If I want to build a version of my latest pdf-reader on a new computer, I just compile it. There's no need to check for complex, interwoven dependencies between it and other software I'd written before constructing the design, in software you can just do it.
+Keeping stock of components for my designs was a new problem I hadn't considered. If I want to build a version of my latest pdf-reader on a new computer, I just compile it. There's no need to check for complex, interwoven dependencies between it and other software I'd written before constructing the design, in software you can just do it.
 
 ## The solution
 
@@ -49,7 +49,7 @@ This parametric interface allowed be to print bins for each component and a comp
 
 As could probably be derived from the mixed colouring of my grid, I printed the parts from filament I had laying around, thus the slightly stochastic look.
 
-To label each bin I wrote a [typst](https://typst.app/) file which automatically lays out each component name on an A4 paper with guides for where to cut. The only input is a list of component names whos labels shall be printed
+To label each bin I wrote a [typst](https://typst.app/) file which automatically lays out each component name on an A4 paper with guides for where to cut. The only input is a list of component names whose labels shall be printed
 
 ```typst
 #let names = (
@@ -65,15 +65,15 @@ To label each bin I wrote a [typst](https://typst.app/) file which automatically
 
 Having a mapping from a physical grid of components to a digital database of their count seems useful but isn't enough to provide a satisfactory user experience.
 
-The most important part of the software isn't visible until the left panel is switch from **Part Search** to **BOM Search**. In BOM (*bill of materials*) mode, I can search for entire sets of parts belonging to circuits I've designed. These are of course imported straight from the `csv` export of [Altium](https://www.altium.com/) where I design them.
+The most important part of the software isn't visible until the left panel is switch from **Part Search** to **BOM Search**. In BOM (*bill of materials*) mode, I can search for entire sets of parts belonging to circuits I've designed. These are of course imported straight from the `csv` export of [Altium Designer](https://www.altium.com/) where I design them.
 
-Opening a BOM shows the location of all components needed to assemble it and allows for batch stock management. This shows me which bins to place in the afforementioned rugged box to be brought to assembly.
+Opening a BOM shows the location of all components needed to assemble it and allows for batch stock management. This shows me which bins to place in the aforementioned rugged box to be brought to assembly.
 
 ![A picture of an opened BOM](/src/assets/pcb_client.png)
 
 ## Future work
 
-While the software is currently perfectly useable, I should know since I use it frequently, there is still room for improvement. Key features I'm looking to implement in the future are:
+While the software is currently perfectly usable, I should know since I use it frequently, there is still room for improvement. Key features I'm looking to implement in the future are:
 
 - BOM export for bulk purchases at Digi-Key or Mouser
 - Settings for the grid, not everyone (or me in the future) is going to have a 7x7 grid layout
@@ -83,4 +83,4 @@ I had a lot of fun building the software itself. Native GUI applications have al
 
 Before arriving at the GUI I also wrote a completely standalone CLI version of the program which has been of great use for testing. Which leads me to the final piece of future work
 
-- Write a blogpost about making the software itself, it's architechture and development strategies I employed to minimise risk at every step
+- Write a blog post about making the software itself, it's architecture and development strategies I employed to minimise risk at every step
