@@ -5,10 +5,6 @@ preview: ...
 date: July 2025
 time: "00:00"
 timestamp: 1750854203
-
-// TODO: 
-// - Take a picture of the physical grid and insert below
-// - List styling
 ---
 
 Since graduating from university I've gotten more and more into embedded software development. This has even spilled over into designing PCBs *(printed circuit boards)* for my embedded devices to sit on.
@@ -41,13 +37,13 @@ Having the hammer of software development at my disposal, organising electrical 
 
 As the mouse hovers over each electrical part, it's position in the grid is highlighted on the right. *Why a grid? What does it represent?* A physical, 3D-printed grid storage system of course.
 
-![A picture of the physical grid](/src/assets/pcb_client.png) 
+![A picture of the physical grid](/src/assets/pcb_grid.jpg) 
 
 The grid is part of the modular, open-source storage system [Gridfinity](https://gridfinity.xyz/). In particular the parts I used were generated in the OpenSCAD-powered [Gridfinity Generator](https://gridfinity.perplexinglabs.com/).
 
 This parametric interface allowed be to print bins for each component and a compatible baseplate for them to stand on. Among other models it also allowed me to generate `.stl` files for a portable carrying box (*Rugged box*) which I use to transport the parts from my cabinet to the electronics lab for assembly.
 
-![A picture of the rugged box](/src/assets/pcb_client.png)
+![A picture of the rugged box](/src/assets/pcb_rugged_box.jpg)
 
 ### Bins
 
