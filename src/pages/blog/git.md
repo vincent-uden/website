@@ -129,11 +129,11 @@ There are some problems though. Constantly pulling and pushing to the same share
 
 It is possible to split a repository into mulitple branches, allowing multiple, parallell version histories to exist at once. When commiting to a branch, your changes are encapsulated in that parallell state until you decide to merge your branch back to the master branch as pictured below.
 
-![Merging branch to master](/img/branches.svg)
+![Merging branch to master](/src/assets/branches.svg)
 
 In practice the merge is usually done in a slightly different way. It is very likely that the master branch contains lots of conflicting changes. Merging to the master branch would pollute it with a broken state. Therefore it's common to merge the changes _from_ `master` _to_ the branch, resolving all conflicts and then merging _from_ the branch _to_ `master` as below.
 
-![Merging master to branch](/img/branches2.svg)
+![Merging master to branch](/src/assets/branches2.svg)
 
 In practice, I create all my branches on the remote (e.g. on GitHubs website). Creating local branches which you then upload to remote is nothing I've played around with.
 

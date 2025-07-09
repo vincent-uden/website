@@ -75,7 +75,7 @@ cargo install bacon
 ```
 and run the binary in a Rust project (usually in a separate terminal on the side) to get a list of warnings and errors for your project like below:
 
-![Bacon in use](/img/bacon.png)
+![Bacon in use](/src/assets/bacon.png)
 
 Lastly, make sure to use git to properly sync and version your software project to avoid losing your work and to be able to check on previous versions of your problem solutions. If you're not familiar with git I'd suggest checking out my [blog post](/blog/git-gud) on just that.
 

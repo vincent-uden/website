@@ -37,17 +37,17 @@ The organisational task of keeping a stock for my designs was a new problem I ha
 
 Having the hammer of software development at my disposal, organising electrical components was looking a lot like a nail. The resulting program consists of parts, a panel and a grid.
 
-![A screenshot of the program](/img/pcb_client.png)
+![A screenshot of the program](/src/assets/pcb_client.png)
 
 As the mouse hovers over each electrical part, it's position in the grid is highlighted on the right. *Why a grid? What does it represent?* A physical, 3D-printed grid storage system of course.
 
-![A picture of the physical grid](/img/pcb_client.png) 
+![A picture of the physical grid](/src/assets/pcb_client.png) 
 
 The grid is part of the modular, open-source storage system [Gridfinity](https://gridfinity.xyz/). In particular the parts I used were generated in the OpenSCAD-powered [Gridfinity Generator](https://gridfinity.perplexinglabs.com/).
 
 This parametric interface allowed be to print bins for each component and a compatible baseplate for them to stand on. Among other models it also allowed me to generate `.stl` files for a portable carrying box (*Rugged box*) which I use to transport the parts from my cabinet to the electronics lab for assembly.
 
-![A picture of the rugged box](/img/pcb_client.png)
+![A picture of the rugged box](/src/assets/pcb_client.png)
 
 ### Bins
 
@@ -73,7 +73,7 @@ The most important part of the software isn't visible until the left panel is sw
 
 Opening a BOM shows the location of all components needed to assemble it and allows for batch stock management. This shows me which bins to place in the afforementioned rugged box to be brought to assembly.
 
-![A picture of an opened BOM](/img/pcb_client.png)
+![A picture of an opened BOM](/src/assets/pcb_client.png)
 
 ## Future work
 
