@@ -69,7 +69,7 @@ The most important part of the software isn't visible until the left panel is sw
 
 Opening a BOM shows the location of all components needed to assemble it and allows for batch stock management. This shows me which bins to place in the aforementioned rugged box to be brought to assembly.
 
-![A picture of an opened BOM](/src/assets/pcb_client.png)
+![A picture of an opened BOM](/src/assets/pcb_bom.png)
 
 ## Future work
 
@@ -81,6 +81,6 @@ While the software is currently perfectly usable, I should know since I use it f
 
 I had a lot of fun building the software itself. Native GUI applications have always implied more pain than necessary for me, until I found [iced](https://iced.rs/) which empowered me to build this program among a few others. 
 
-Before arriving at the GUI I also wrote a completely standalone CLI version of the program which has been of great use for testing. Which leads me to the final piece of future work
+Before arriving at the GUI I also wrote a completely standalone CLI version of the program which has been of great use for testing. Which leads me to the final piece of future work:
 
 - Write a blog post about making the software itself, it's architecture and development strategies I employed to minimise risk at every step
