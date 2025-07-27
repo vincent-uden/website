@@ -3,8 +3,8 @@ layout: ../../layouts/BlogLayout.astro
 title: Open source BOM management
 preview: Since graduating from university I've gotten more and more into embedded software development. This has even spilled over into designing PCBs (printed circuit boards) for my embedded devices...
 date: July 2025
-time: "23:17"
-timestamp: 1750854203
+time: "20:20"
+timestamp: 1753640433
 ---
 
 Since graduating from university I've gotten more and more into embedded software development. This has even spilled over into designing PCBs *(printed circuit boards)* for my embedded devices to sit on.
