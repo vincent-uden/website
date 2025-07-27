@@ -81,6 +81,6 @@ While the software is currently perfectly usable, I should know since I use it f
 
 I had a lot of fun building the software itself. Native GUI applications have always implied more pain than necessary for me, until I found [iced](https://iced.rs/) which empowered me to build this program among a few others. 
 
-Before arriving at the GUI I also wrote a completely standalone CLI version of the program which has been of great use for testing. Which leads me to the final piece of future work:
+Before arriving at the GUI I also wrote a completely standalone CLI version of the program which has been of great use for testing. The two front end are available in [pcb-parts-client](https://github.com/vincent-uden/pcb-parts-client) and the server is available at [pcb-parts-server](https://github.com/vincent-uden/pcb-parts-server). Which leads me to the final piece of future work:
 
 - Write a blog post about making the software itself, it's architecture and development strategies I employed to minimise risk at every step
