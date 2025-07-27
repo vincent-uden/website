@@ -5,7 +5,6 @@ interface Props {
 
 const { title } = Astro.props;
 
-import { ViewTransitions } from "astro:transitions";
 import Analytics from "../components/Analytics.astro";
 import Menu from "../components/Menu";
 import ContactIcons from "../components/ContactIcons";
@@ -20,7 +19,6 @@ import ContactIcons from "../components/ContactIcons";
     <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{`Vincent / ${title}`}</title>
-    <ViewTransitions />
   </head>
   <body class="bg-onyx">
     <div

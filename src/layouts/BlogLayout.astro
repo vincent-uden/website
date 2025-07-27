@@ -6,7 +6,6 @@ interface Props {
 
 const { title, frontmatter } = Astro.props;
 
-import { ViewTransitions } from "astro:transitions";
 import Analytics from "../components/Analytics.astro";
 import Menu from "../components/Menu";
 import ContactIcons from "../components/ContactIcons";
@@ -22,7 +21,6 @@ import "../styles/markdown_style.css";
     <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{`Vincent / ${frontmatter.title}`}</title>
-    <ViewTransitions />
   </head>
   <body class="bg-onyx">
     <div
