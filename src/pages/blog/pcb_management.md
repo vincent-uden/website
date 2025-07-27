@@ -7,7 +7,7 @@ time: "20:20"
 timestamp: 1753640433
 ---
 
-Since graduating from university I've gotten more and more into embedded software development. This has even spilled over into designing PCBs *(printed circuit boards)* for my embedded devices to sit on.
+Since graduating from university I've gotten more and more into embedded software development. This has even spilled over into designing PCBs _(printed circuit boards)_ for my embedded devices to sit on.
 
 Initially I had assumed that the leap from software to hardware design would be insurmountable without any formal education but it turned out to be quite enjoyable. It turned out that the problem I'd be facing wasn't a technical one, but of an organisational nature.
 
@@ -15,7 +15,7 @@ Initially I had assumed that the leap from software to hardware design would be 
 
 Designing circuits turned out to be a lot like software development. Or at least I managed to force it to become similar to how I develop software.
 
-Modular parts or blocks, which I could share between circuits needing similar functionality sounds a lot like *DRY*. Avoiding complexity by only including the absolute bare minimum that I could get away with sure sounds like *KISS*. And so I charged forwards into the world of power electronics, sensors and Bluetooth communication, armed to the teeth with sort-of applicable design principles.
+Modular parts or blocks, which I could share between circuits needing similar functionality sounds a lot like _DRY_. Avoiding complexity by only including the absolute bare minimum that I could get away with sure sounds like _KISS_. And so I charged forwards into the world of power electronics, sensors and Bluetooth communication, armed to the teeth with sort-of applicable design principles.
 
 I ordered PCBs, parts and went to town with soldering paste, stencils and a soldering iron to realise my new creations. And that is where the problems began.
 
@@ -33,17 +33,17 @@ Keeping stock of components for my designs was a new problem I hadn't considered
 
 Having the hammer of software development at my disposal, organising electrical components was looking a lot like a nail. The resulting program consists of parts, a panel and a grid.
 
-![A screenshot of the program](/src/assets/pcb_client.png)
+![A screenshot of the program](/assets/pcb_client.png)
 
-As the mouse hovers over each electrical part, it's position in the grid is highlighted on the right. *Why a grid? What does it represent?* A physical, 3D-printed grid storage system of course.
+As the mouse hovers over each electrical part, it's position in the grid is highlighted on the right. _Why a grid? What does it represent?_ A physical, 3D-printed grid storage system of course.
 
-![A picture of the physical grid](/src/assets/pcb_grid.jpg) 
+![A picture of the physical grid](/assets/pcb_grid.jpg)
 
 The grid is part of the modular, open-source storage system [Gridfinity](https://gridfinity.xyz/). In particular the parts I used were generated in the OpenSCAD-powered [Gridfinity Generator](https://gridfinity.perplexinglabs.com/).
 
-This parametric interface allowed be to print bins for each component and a compatible baseplate for them to stand on. Among other models it also allowed me to generate `.stl` files for a portable carrying box (*Rugged box*) which I use to transport the parts from my cabinet to the electronics lab for assembly.
+This parametric interface allowed be to print bins for each component and a compatible baseplate for them to stand on. Among other models it also allowed me to generate `.stl` files for a portable carrying box (_Rugged box_) which I use to transport the parts from my cabinet to the electronics lab for assembly.
 
-![A picture of the rugged box](/src/assets/pcb_rugged_box.jpg)
+![A picture of the rugged box](/assets/pcb_rugged_box.jpg)
 
 ### Bins
 
@@ -65,11 +65,11 @@ To label each bin I wrote a [typst](https://typst.app/) file which automatically
 
 Having a mapping from a physical grid of components to a digital database of their count seems useful but isn't enough to provide a satisfactory user experience.
 
-The most important part of the software isn't visible until the left panel is switch from **Part Search** to **BOM Search**. In BOM (*bill of materials*) mode, I can search for entire sets of parts belonging to circuits I've designed. These are of course imported straight from the `csv` export of [Altium Designer](https://www.altium.com/) where I design them.
+The most important part of the software isn't visible until the left panel is switch from **Part Search** to **BOM Search**. In BOM (_bill of materials_) mode, I can search for entire sets of parts belonging to circuits I've designed. These are of course imported straight from the `csv` export of [Altium Designer](https://www.altium.com/) where I design them.
 
 Opening a BOM shows the location of all components needed to assemble it and allows for batch stock management. This shows me which bins to place in the aforementioned rugged box to be brought to assembly.
 
-![A picture of an opened BOM](/src/assets/pcb_bom.png)
+![A picture of an opened BOM](/assets/pcb_bom.png)
 
 ## Future work
 
@@ -79,7 +79,7 @@ While the software is currently perfectly usable, I should know since I use it f
 - Settings for the grid, not everyone (or me in the future) is going to have a 7x7 grid layout
 - Grid-based search. Right now the search is one way, from the left panel to the grid. A user should be able to query the grid for the component it is supposed to contain
 
-I had a lot of fun building the software itself. Native GUI applications have always implied more pain than necessary for me, until I found [iced](https://iced.rs/) which empowered me to build this program among a few others. 
+I had a lot of fun building the software itself. Native GUI applications have always implied more pain than necessary for me, until I found [iced](https://iced.rs/) which empowered me to build this program among a few others.
 
 Before arriving at the GUI I also wrote a completely standalone CLI version of the program which has been of great use for testing. The two front end are available in [pcb-parts-client](https://github.com/vincent-uden/pcb-parts-client) and the server is available at [pcb-parts-server](https://github.com/vincent-uden/pcb-parts-server). Which leads me to the final piece of future work:
 
