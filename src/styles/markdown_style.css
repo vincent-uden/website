@@ -25,9 +25,11 @@
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -88,13 +90,21 @@ code {
 }
 
 main img {
-    @apply hover:scale-[200%] hover:z-10 hover:relative transition-transform hover:shadow-lg;
+  @apply hover:scale-[200%] hover:z-10 hover:relative transition-transform hover:shadow-lg max-h-[480px] mx-auto;
+}
+
+main ul {
+  @apply list-disc pl-4;
+}
+
+main li {
+  @apply font-gothic text-pale-grey text-lg mb-4;
 }
 
 .astro-code {
   @apply !bg-darker-grey p-2 mb-4 border-2 border-slate-dark shadow-lg;
 }
 
-.astro-code > code {
+.astro-code>code {
   background-color: transparent;
 }
