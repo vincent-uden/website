@@ -3,16 +3,15 @@ const url = Astro.url.toString();
 ---
 
 <script define:vars={{ url }}>
-const postBody = {
-  path: new URL(url).pathname,
-};
+  const postBody = {
+    path: new URL(url).pathname,
+  };
 
-fetch("/analytics", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(postBody),
-});
-
+  fetch("/analytics", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(postBody),
+  });
 </script>
