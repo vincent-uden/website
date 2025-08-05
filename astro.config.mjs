@@ -1,12 +1,25 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import solidJs from "@astrojs/solid-js";
+// @ts-check
 
-import vercel from "@astrojs/vercel/serverless";
+import sitemap from "@astrojs/sitemap";
+import { defineConfig } from "astro/config";
+
+import tailwindcss from "@tailwindcss/vite";
+import vercel from "@astrojs/vercel";
+
+import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), solidJs()],
-  output: "server",
-  adapter: vercel()
+  site: "https://example.com",
+  integrations: [sitemap(), solidJs()],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  adapter: vercel(),
+  image: {
+    layout: "constrained",
+  },
 });
+

@@ -1,7 +1,8 @@
 import type { APIContext } from "astro";
 
-export async function POST({ request }: APIContext) {
+export const prerender = false;
 
+export async function POST({ request }: APIContext) {
   const requestBody = await request.json();
 
   let body = {
