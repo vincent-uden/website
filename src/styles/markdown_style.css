@@ -1,3 +1,5 @@
+@import "./global.css";
+
 .panel {
   box-shadow:
     8px 8px 16px #2a2c2f,
@@ -90,7 +92,7 @@ code {
 }
 
 main img {
-  @apply hover:scale-[200%] hover:z-10 hover:relative transition-transform hover:shadow-lg max-h-[480px] mx-auto;
+  @apply hover:scale-[200%] hover:z-10 hover:relative transition-transform hover:shadow-lg max-h-[480px] mx-auto w-auto;
 }
 
 main ul {

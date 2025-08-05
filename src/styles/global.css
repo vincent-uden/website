@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-onyx: #383a3e;
+  --color-xanadu: #808f85;
+  --color-eton: #91c499;
+  --color-linen: #f2e9dc;
+  --color-coral: #fe6d73;
+  --color-pale-grey: #dce8f2;
+  --color-slate-blue: #8c9dbf;
+  --color-slate-dark: #5b647b;
+  --color-dark-grey: #383a3e;
+  --color-darker-grey: #202125bb;
+
+  --font-geo: "Geometos", "sans-serif";
+  --font-gothic: "Century Gothic", "sans-serif";
+}

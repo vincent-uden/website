@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => -(a.data.timestamp - b.data.timestamp),
+);
+---
+
+<Layout title="Vincent / Blog Archive">
+  <h1
+    class="font-geo text-5xl lg:text-6xl px-8 lg:px-16 text-pale-grey -translate-x-1 text-left"
+  >
+    BLOG ARCHIVE.
+  </h1>
+
+  <div class="h-8"></div>
+
+  {
+    posts.map((post) => {
+      return (
+        <>
+          <a href={`/blog/${post.id}`}>
+            <div class="mx-4 bg-darker-grey p-0 lg:p-4 mb-8 shadow-xl">
+              <div class="bg-slate-dark p-4 mb-2">
+                <h2
+                  transition:name={`blog-${post.data.title}`}
+                  class="m-0 font-gothic text-3xl text-pale-grey"
+                >
+                  {post.data.title}
+                </h2>
+              </div>
+              <div class="flex flex-row px-4 mb-2 text-pale-grey">
+                <p class="font-gothic text-lg grow m-0">{post.data.date}</p>
+                <p class="font-gothic text-lg m-0">{post.data.time}</p>
+              </div>
+              <div class="h-4 bg-slate-blue" />
+              <p class="font-gothic p-4 lg:p-8 text-lg lg:text-xl text-pale-grey">
+                {post.data.preview}
+              </p>
+            </div>
+          </a>
+
+          <div class="h-16" />
+        </>
+      );
+    })
+  }
+</Layout>
+
+<style></style>
