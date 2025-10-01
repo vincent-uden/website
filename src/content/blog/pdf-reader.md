@@ -46,3 +46,27 @@ If rasterising pdfs is a passion of yours, I highly recommend the book. It conta
 Writing a cross-platform native GUI has always seemed way harder than it has any right to be. On one hand you have the giants, Qt and GTK which expose enormous API surfaces and might require several books of their own to understand properly. Not mention *interesting* licensing in the case of Qt.
 
 One the other hand you have the Raylib/OpenGL/etc. style of creating user interfaces. Nothing is included, if it is, it isn't customizable at all.
+
+Usually, I am quite partial to the second approach. This time however, I wanted to find something in between the extremes. After rummaging through everything from *Slint* to *Dear Imgui* I finally settled on giving [iced](https://iced.rs/) a shot. As mentioned in [Open source bom management](/blog/pcb_management), I have actually used iced before for smaller programs. Now it was time for something more complex.
+
+Design-wise, there isn't a whole lot to mention. I settled on a pretty standard layout of a main window with a sidebar containing bookmarks and a document outline.
+
+![A screenshot of the pdf reader](../../assets/miro.png)
+
+The interface can of course turn dark. But so can the pdf!
+
+**TODO: Image of dark mode pdf**
+
+## Performance
+
+In the grand scheme of things, I'm very happy with the performance of the reader. Specifically I like that it is fast enough to be *simple*. As mentioned by the likes of [Ryan Fleury](https://www.youtube.com/watch?v=_9_bK_WjuYY) and [Vjekoslav Krajačić](https://www.youtube.com/watch?v=bUOOaXf9qIM) among many other: *speed is a feature in itself*.
+
+Zathura with the mupdf backend is unable to zoom smoothly while maintaining a clear rasterization of the pdf. It zooms optimistically by upscaling the current bitmap which results in a pop-in a fraction of a second later when a crisp rendition replaces the blurred one.
+
+[Miro](https://github.com/vincent-uden/miro) on the other hand leverages a feature called `DisplayList` to cache some data internally in mupdf to achieve several hundred, crisp renders per second if needed.
+
+Before discovering `DisplayList`s, I had a complex and multi threaded system that rendered the PDF in tiles. This was awful to work with. Bugs arose from the asynchronous nature of rendering on a background thread and pixel-perfect rendering was near impossible to get right at tile borders.
+
+Optimizing and probing mupdf for more advanced features led me to a simple solution, over a thousand lines of code shorter than the multi-threaded solution.
+
+The only point where my PDF reader struggles is on pages using embedded svgs (or other pdfs) with several thousand entities contained, such as un-opimized graphs in scientific papers. I would love to resolve this some day.
