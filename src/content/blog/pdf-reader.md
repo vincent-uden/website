@@ -33,4 +33,16 @@ If I could manage to implement this rather small set of features, where the last
 
 I read somewhere once that problems should always be tackled in the order from most- to least- difficult if you're serious about solving them. Makes enough sense to me. Climb the mountain first and coast downhill afterwards, ticking off features with increasing speed and decreasing effort as you grow tired of the project.
 
+Parsing the gigantic pdf specification and transforming decades worth of revisions into a bunch of pixels is certainly that most difficult task.
 
+Fortunately, this herculean task has already been tackled by others. Once again I took inspiration from Zathura. It has a backend for rendering which uses [Mupdf](https://mupdf.com/) for rasterisation and other pdf-parsing uses. Since I already enjoyed the performance and look of pdfs in Zathura, I might as well base my solution on the same set of giant shoulders.
+
+The [official documentation](https://mupdf.readthedocs.io/en/latest/reference/c/index.html) is pretty good, if you already understand how Mupdf works and just needs to refresh your memory on the API. But when you are just starting to dip your toes into this massive library, some additional structure is greatly appreciated. For this purpose, I read parts of [Mupdf Explored](https://casper.mupdf.com/docs/mupdf_explored.pdf), an online-book by [Robin Watts](https://pdfa.org/people/robin-watts/).
+
+If rasterising pdfs is a passion of yours, I highly recommend the book. It contains everything from the simples of PDF-to-PNG examples, to cached workflows that achieve hundreds of renders per second.
+
+## User interface
+
+Writing a cross-platform native GUI has always seemed way harder than it has any right to be. On one hand you have the giants, Qt and GTK which expose enormous API surfaces and might require several books of their own to understand properly. Not mention *interesting* licensing in the case of Qt.
+
+One the other hand you have the Raylib/OpenGL/etc. style of creating user interfaces. Nothing is included, if it is, it isn't customizable at all.
