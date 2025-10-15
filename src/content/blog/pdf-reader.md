@@ -58,7 +58,7 @@ Design-wise, there isn't a whole lot to mention. I settled on a pretty standard 
 
 The interface can of course turn dark. And so can the PDF!
 
-**TODO: Image of dark mode PDF**
+![A screenshot of the PDF reader](../../assets/miro_dark.png)
 
 ## Performance
 
