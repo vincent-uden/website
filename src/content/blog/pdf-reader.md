@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogLayout.astro
 title: I hate acrobat
-preview: ...
+preview: Acrobat is intrusive, slow and non-customizable. Of course there are alternatives, specifically bad ones...
 date: 15th of October 2025
-time: "23:39"
-timestamp: 1759305508
+time: "23:52"
+timestamp: 1760565134
 ---
 
 ## Why?
