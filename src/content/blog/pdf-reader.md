@@ -16,7 +16,7 @@ Of course there are alternatives, specifically bad ones.
 - FoxIt is slow and non-customizable.
 - Chrome/Firefox kinda works as a PDF reader, but is lacking in the feature department.
 
-On linux there is (at least) one non-bad PDF reader. Zathura is amazing with the MuPDF backend. However it only works on X11/Xorg and thus Linux. I use Wayland and Windows.
+On linux there is (at least) one non-bad PDF reader. Zathura is amazing with the MuPDF backend. However it only works on ~X11/Xorg~ *(I have been told that Zathura works natively on Wayland!)* and thus Linux. Despite my best efforts to eliminate the latter I use both Linux and Windows.
 
 ## Zathura-2?
 
@@ -46,7 +46,7 @@ If rasterising PDFs is a passion of yours, I highly recommend the book. It conta
 
 ## User interface
 
-Writing a cross-platform native GUI has always seemed way harder than it has any right to be. On one hand you have the giants, Qt and GTK which expose enormous API surfaces and might require several books of their own to understand properly. Not to mention *interesting* licensing in the case of Qt.
+Writing a cross-platform native GUI has always seemed way harder than it has any right to be. On one hand you have the giants, Qt and GTK which expose enormous API surfaces and might require several books of their own to understand properly.
 
 One the other hand you have the Raylib/OpenGL/etc. style of creating user interfaces. Nothing is included, if it is, it isn't customizable at all.
 
