@@ -112,5 +112,18 @@ import "../styles/markdown_style.css";
     </style>
 
     <Analytics />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const labels = document.querySelectorAll("label.sidenote-number");
+        for (const label of labels) {
+            label.addEventListener("click", function() {
+                console.log("Clicked", label.attributes["for"]);
+                const sidenote = document.getElementById(label.attributes["for"].value)
+                sidenote.classList.toggle("expanded");
+            })
+        }
+    }, false)
+    </script>
   </body>
 </html>
