@@ -6,8 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import Analytics from "../components/Analytics.astro";
-import Menu from "../components/Menu";
-import ContactIcons from "../components/ContactIcons";
+import Menu from "../components/Menu.astro";
 import "../styles/global.css";
 ---
 
@@ -38,7 +37,7 @@ import "../styles/global.css";
       class="fixed top-[45.75rem] left-[45rem] border-pale-grey border-[3px] w-12 h-12 rounded-full -z-10 opacity-70"
     >
     </div>
-    <Menu client:load />
+    <Menu />
 
     <main class="max-w-screen-sm z-10 mx-auto">
       <div class="h-36 md:h-36"></div>

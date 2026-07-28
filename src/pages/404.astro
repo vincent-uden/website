@@ -1,6 +1,6 @@
 ---
-import ContactIcons from "../components/ContactIcons";
-import Menu from "../components/Menu";
+import Menu from "../components/Menu.astro";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -29,8 +29,8 @@ import Menu from "../components/Menu";
       </div>
     </div>
 
-    <main class="max-w-screen-sm px-16 xl:px-0 pt-92 z-10 mx-auto">
-      <div class="h-48 md:h-72"></div>
+    <Menu />
+    <main class="max-w-screen-sm px-16 xl:px-0 pt-48 z-10 mx-auto">
       <h1 class="font-geo text-6xl text-pale-grey">404.</h1>
       <div class="h-8"></div>
       <h2 class="font-gothic text-pale-grey text-2xl">
@@ -45,11 +45,6 @@ import Menu from "../components/Menu";
 
     <div class="h-32"></div>
 
-    <div class="fixed top-6 right-4 lg:right-16 lg:top-1/2 lg:-translate-y-1/2">
-      <ContactIcons client:load />
-    </div>
-
-    <Menu client:load />
 
     <style is:global>
       .panel {
