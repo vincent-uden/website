@@ -107,7 +107,7 @@ main li {
   @apply !bg-darker-grey p-2 mb-4 border-2 border-slate-dark shadow-lg;
 }
 
-.astro-code>code {
+.astro-code > code {
   background-color: transparent;
 }
 
@@ -116,9 +116,44 @@ table {
 }
 
 th {
-    @apply text-left;
+  @apply text-left;
 }
 
-th, td {
-    @apply p-2 border-2 border-[#667];
+th,
+td {
+  @apply p-2 border-2 border-[#667];
+}
+
+body {
+  counter-reset: sidenote;
+}
+
+label.sidenote-number {
+  counter-increment: sidenote;
+}
+
+label.sidenote-number::before {
+  content: counter(sidenote);
+}
+
+
+span.sidenote {
+  @apply font-gothic text-pale-grey;
+
+  font-size: 16px;
+  line-break: anywhere;
+  margin: 0;
+
+  float: right;
+  clear: right;
+  width: 300px;
+  margin-right: -340px;
+  vertical-align: baseline;
+  margin-top: 0;
+
+  transform: translateY(-100%);
+}
+
+span.sidenote::before {
+  content: counter(sidenote);
 }

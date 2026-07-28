@@ -19,7 +19,11 @@ Before we can discuss the dire state of funding and applications I should descri
 
 It was originally developed by NASA in the 1970s to describe the readiness level of different technologies for space flight. 7 levels of readiness were defined and used in order to manage the risk of incorporating new advances in technology into their space operations.
 
-The scale was redefined in the 80s to consist of 9 levels which is still the case today. Eventually the scale was de facto used in a lot of research proposals seeking funding from the European Commission via the *EU Horizon* program [1]. In 2014 an actual definition was determined by the commission which we can compare to the original NASA definitions below:
+The scale was redefined in the 80s to consist of 9 levels which is still the case today. Eventually the scale was de facto used in a lot of research proposals seeking funding from the European Commission via the *EU Horizon* program <label for="eu-horizon" class="sidenote-number"/><input id="eu-horizon" type="checkbox" />. In 2014 an actual definition was determined by the commission which we can compare to the original NASA definitions below:
+
+<span class="sidenote">
+<a href="https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en">https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en</a>
+</span>
 
 | TRL&nbsp;Level | NASA Definition                                                                                 | EU Horizon Definition                                     |
 | --------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
