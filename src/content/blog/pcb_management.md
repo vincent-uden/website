@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: Open source BOM management
 preview: Since graduating from university I've gotten more and more into embedded software development. This has even spilled over into designing PCBs (printed circuit boards) for my embedded devices...
 date: July 2025

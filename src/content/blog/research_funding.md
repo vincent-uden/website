@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: "[TODO] Research Funding"
 preview: ...
 date: August 2026

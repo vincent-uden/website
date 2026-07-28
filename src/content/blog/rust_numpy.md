@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: Rust for Numpy Enthusiasts
 preview: Programming numerical simulations is very fun. Waiting for numerical simulations to run is the opposite of fun. The aim of this article is to present an alternative reality where you write more simulations and iterate on solutions faster...
 date: 27th of september 2023

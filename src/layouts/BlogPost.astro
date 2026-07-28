@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 type Props = CollectionEntry<"blog">["data"];
 
-const { layout, title, preview, date, time, timestamp } = Astro.props;
+const { title, preview, date, time, timestamp } = Astro.props;
 
 import Analytics from "../components/Analytics.astro";
 import Menu from "../components/Menu";
