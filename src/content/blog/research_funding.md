@@ -1,6 +1,6 @@
 ---
-title: "[TODO] Research Funding"
-preview: ...
+title: How not to fund research
+preview: While I usually write about my adventures in software my day job for the last two years has actually been as a research engineer...
 date: August 2026
 time: "16:00"
 timestamp: 1760575134
