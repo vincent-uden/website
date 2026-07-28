@@ -125,20 +125,22 @@ td {
 }
 
 body {
-  counter-reset: sidenote;
+  counter-reset: sidenote sidenote-label;
 }
 
 label.sidenote-number {
-  counter-increment: sidenote;
+  counter-increment: sidenote-label;
 }
 
 label.sidenote-number::before {
-  content: counter(sidenote);
+  content: counter(sidenote-label);
 }
 
 
 span.sidenote {
   @apply font-gothic text-pale-grey;
+
+  counter-increment: sidenote;
 
   font-size: 16px;
   line-break: anywhere;
