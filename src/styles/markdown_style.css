@@ -110,3 +110,15 @@ main li {
 .astro-code>code {
   background-color: transparent;
 }
+
+table {
+  @apply font-gothic text-pale-grey text-lg lg:text-xl mb-4;
+}
+
+th {
+    @apply text-left;
+}
+
+th, td {
+    @apply p-2 border-2 border-[#667];
+}

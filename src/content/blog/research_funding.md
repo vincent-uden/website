@@ -21,7 +21,7 @@ It was originally developed by NASA in the 1970s to describe the readiness level
 
 The scale was redefined in the 80s to consist of 9 levels which is still the case today. Eventually the scale was de facto used in a lot of research proposals seeking funding from the European Commission via the *EU Horizon* program [1]. In 2014 an actual definition was determined by the commission which we can compare to the original NASA definitions below:
 
-| TRL Level | NASA Definition                                                                                 | EU Horizon Definition                                     |
+| TRL&nbsp;Level | NASA Definition                                                                                 | EU Horizon Definition                                     |
 | --------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
 | 1         | Basic principles observed and reported                                                          | Basic principles observed                                 |
 | 2         | Technology concept and/or application formulated                                                | Technology formulated                                     |
