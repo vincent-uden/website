@@ -1,11 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-import ContactIcons from "../components/ContactIcons";
 ---
 
 <Layout title="Index">
-  <div class="h-12 md:h-36"></div>
+  <div class="h-12"></div>
   <main class="px-8 lg:px-16">
     <h1 class="font-geo text-5xl lg:text-6xl text-pale-grey -translate-x-1">
       HI, I'M VINCENT.
@@ -13,17 +11,27 @@ import ContactIcons from "../components/ContactIcons";
 
     <div class="h-4"></div>
     <p class="font-gothic text-pale-grey text-lg lg:text-2xl">
-      I'm a research and development engineer at <a href="">RISE</a> primarily in
-      energy harvesting and wireless measurement technology. When I'm not working
-      I delve into programming subjects such as machine learning and Rust.
+      I develop native, cross-platform software such as the pdf reader <a href="https://github.com/vincent-uden/miro" class="text-slate-blue">miro</a>.
     </p>
     <div class="h-8"></div>
     <p class="font-gothic text-pale-grey text-lg lg:text-2xl">
-      Contact me using any of the means on the right or check out my blog posts
-      about tech, programming or whatever it is I'm up to using the menu on the
+      Contact me using any of the means below or check out my articles
+      about tech, programming or whatever it is I'm currently up to.
       left.
     </p>
-
-    <div class="h-16"></div>
+    <div class="h-48"></div>
+    <div class="grid font-gothic text-pale-grey text-lg lg:text-xl gap-x-4">
+        <p class="text-right">Email</p>
+        <p class="text-slate-blue">vincentuden [at] gmail [dot] com</p>
+        <p class="text-right">Github</p>
+        <a href="https://github.com/vincent-uden"><p class="text-slate-blue">vincent-uden</p></a>
+        <p class="text-right">Discord</p>
+        <p class="text-slate-blue">vincentuden</p>
+    </div>
   </main>
+<style>
+    div.grid {
+        grid-template-columns: auto auto;
+    }
+</style>
 </Layout>

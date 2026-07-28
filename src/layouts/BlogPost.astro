@@ -38,8 +38,9 @@ import "../styles/markdown_style.css";
       class="fixed top-[45.75rem] left-[45rem] border-pale-grey border-[3px] w-12 h-12 rounded-full -z-10 opacity-70"
     >
     </div>
+    <Menu client:load />
 
-    <main class="max-w-screen-sm px-4 lg:px-16 xl:px-0 z-10 xl:ml-96 mx-auto">
+    <main class="max-w-screen-sm px-4 lg:px-16 xl:px-0 z-10 mx-auto">
       <div class="h-48 md:h-72"></div>
       <h1 transition:name={`blog-${title}`}>{title}</h1>
       <div class="flex flex-row px-2">
@@ -53,11 +54,6 @@ import "../styles/markdown_style.css";
 
     <div class="h-32"></div>
 
-    <div class="fixed top-6 right-4 lg:right-16 lg:top-1/2 lg:-translate-y-1/2">
-      <ContactIcons client:load />
-    </div>
-
-    <Menu client:load />
     <style is:global>
       .panel {
         box-shadow:
