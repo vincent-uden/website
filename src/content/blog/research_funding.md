@@ -38,7 +38,7 @@ The scale was redefined in the 80s to consist of 9 levels which is still the cas
 
 As we can see the EU Horizon definitions are mostly a generalisation of the NASA definitions to allow them to classify non-space research.
 
-Mihály Héder in his article from *THe Public Sector Innovation Journal* <label for="heder-trl" class="sidenote-number"/> concludes this generalisation has led to a gradual loss of sophistication and concreteness which was present in the original usage by NASA. This is most succinctly demonstrated by the fact that the TRL scale was developed as a risk management strategy, to facilitate the elimination of risk, something which is both unattainable and undesirable in the case of research.
+Mihály Héder in his article from *The Public Sector Innovation Journal* <label for="heder-trl" class="sidenote-number"/> concludes this generalisation has led to a gradual loss of sophistication and concreteness which was present in the original usage by NASA. This is most succinctly demonstrated by the fact that the TRL scale was developed as a risk management strategy, to facilitate the elimination of risk, something which is both unattainable and undesirable in the case of research.
 
 <span class="sidenote" id="heder-trl">
 <a href="https://web.archive.org/web/20171011071816/https://www.innovation.cc/discussion-papers/22_2_3_heder_nasa-to-eu-trl-scale.pdf">https://web.archive.org/web/20171011071816/https://www.innovation.cc/discussion-papers/22_2_3_heder_nasa-to-eu-trl-scale.pdf</a>
