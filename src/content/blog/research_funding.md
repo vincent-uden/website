@@ -2,7 +2,7 @@
 title: How not to fund research
 preview: While I usually write about my adventures in software my day job for the last two years has actually been as a research engineer...
 date: 24th of August 2026
-time: "16:00"
+time: "22:00"
 timestamp: 1787602459
 ---
 
