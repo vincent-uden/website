@@ -1,9 +1,9 @@
 ---
 title: How not to fund research
 preview: While I usually write about my adventures in software my day job for the last two years has actually been as a research engineer...
-date: August 2026
+date: 24th of August 2026
 time: "16:00"
-timestamp: 1760575134
+timestamp: 1787602459
 ---
 
 While I usually write about my adventures in software my day job for the last two years has actually been as a research engineer in the field of energy harvesting and energy-autonomous sensing.
