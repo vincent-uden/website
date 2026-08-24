@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: Git Gud
 preview: Git has a rumor of being complicated and difficult to understand. Some parts of the program can be enigmantic but the vast majority of day-to-day usage is very simple...
 date: 25th of february 2023

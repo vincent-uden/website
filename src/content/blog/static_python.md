@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: Statically Typed Python
 preview: "Python is pretty damn good, it’s a great language even. Development is, dare I even say it, blazingly fast and the ecosystem is gigantic, perhaps unrivaled. What’s not to like?"
 date: 15th of december 2022

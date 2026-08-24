@@ -3,11 +3,10 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 type Props = CollectionEntry<"blog">["data"];
 
-const { layout, title, preview, date, time, timestamp } = Astro.props;
+const { title, preview, date, time, timestamp } = Astro.props;
 
 import Analytics from "../components/Analytics.astro";
-import Menu from "../components/Menu";
-import ContactIcons from "../components/ContactIcons";
+import Menu from "../components/Menu.astro";
 import "../styles/markdown_style.css";
 ---
 
@@ -18,6 +17,8 @@ import "../styles/markdown_style.css";
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
+    <link rel="preload" href="/font/Geometos.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/font/CenturyGothic.ttf" as="font" type="font/ttf" crossorigin />
     <meta name="generator" content={Astro.generator} />
     <title>{`Vincent / ${title}`}</title>
   </head>
@@ -38,9 +39,10 @@ import "../styles/markdown_style.css";
       class="fixed top-[45.75rem] left-[45rem] border-pale-grey border-[3px] w-12 h-12 rounded-full -z-10 opacity-70"
     >
     </div>
+    <Menu />
 
     <main class="max-w-screen-sm px-4 lg:px-16 xl:px-0 z-10 mx-auto">
-      <div class="h-48 md:h-72"></div>
+      <div class="h-48"></div>
       <h1 transition:name={`blog-${title}`}>{title}</h1>
       <div class="flex flex-row px-2">
         <p class="grow">{date}</p>
@@ -53,11 +55,6 @@ import "../styles/markdown_style.css";
 
     <div class="h-32"></div>
 
-    <div class="fixed top-6 right-4 lg:right-16 lg:top-1/2 lg:-translate-y-1/2">
-      <ContactIcons client:load />
-    </div>
-
-    <Menu client:load />
     <style is:global>
       .panel {
         box-shadow:
@@ -112,5 +109,18 @@ import "../styles/markdown_style.css";
     </style>
 
     <Analytics />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const labels = document.querySelectorAll("label.sidenote-number");
+        for (const label of labels) {
+            label.addEventListener("click", function() {
+                console.log("Clicked", label.attributes["for"]);
+                const sidenote = document.getElementById(label.attributes["for"].value)
+                sidenote.classList.toggle("expanded");
+            })
+        }
+    }, false)
+    </script>
   </body>
 </html>

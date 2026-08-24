@@ -107,6 +107,84 @@ main li {
   @apply !bg-darker-grey p-2 mb-4 border-2 border-slate-dark shadow-lg;
 }
 
-.astro-code>code {
+.astro-code > code {
   background-color: transparent;
+}
+
+table {
+  @apply font-gothic text-pale-grey text-lg lg:text-xl mb-4;
+}
+
+th {
+  @apply text-left;
+}
+
+th,
+td {
+  @apply p-2 border-2 border-[#667];
+}
+
+body {
+  counter-reset: sidenote sidenote-label;
+}
+
+label.sidenote-number {
+  counter-increment: sidenote-label;
+}
+
+label.sidenote-number::before {
+  @apply font-geo text-pale-grey;
+  content: "[" counter(sidenote-label) "]";
+}
+
+
+span.sidenote {
+  @apply font-gothic text-pale-grey;
+  counter-increment: sidenote;
+  font-size: 16px;
+  line-break: anywhere;
+}
+
+span.sidenote::before {
+    @apply font-geo text-pale-grey font-bold;
+    content: "[" counter(sidenote) "]";
+}
+
+
+@media (max-width: 1279px) {
+    span.sidenote {
+        padding-bottom: 0;
+        visibility: hidden;
+        height: 0;
+        display: block;
+    }
+
+    span.sidenote.expanded {
+        padding-bottom: 16px;
+        visibility: visible;
+        height: auto;
+    }
+
+    label.sidenote-number {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1280px) {
+    span.sidenote {
+        float: right;
+        clear: right;
+        width: 300px;
+        margin-right: -340px;
+        vertical-align: baseline;
+        margin-top: 0;
+        margin-bottom: 8px;
+
+        transform: translateY(-100%);
+    }
+
+    span.sidenote::before {
+        @apply font-geo text-pale-grey font-bold;
+        content: "[" counter(sidenote) "]";
+    }
 }

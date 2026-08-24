@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: Haskell's Fatal Flaw
 preview: There are over 25 million software developers all over the world right now. Every single one of them has their own preferences about what they want in a programming language. Not too surprisingly ...
 date: 24th of july 2020

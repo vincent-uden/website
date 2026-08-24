@@ -6,8 +6,7 @@ interface Props {
 const { title } = Astro.props;
 
 import Analytics from "../components/Analytics.astro";
-import Menu from "../components/Menu";
-import ContactIcons from "../components/ContactIcons";
+import Menu from "../components/Menu.astro";
 import "../styles/global.css";
 ---
 
@@ -18,6 +17,8 @@ import "../styles/global.css";
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
+    <link rel="preload" href="/font/Geometos.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/font/CenturyGothic.ttf" as="font" type="font/ttf" crossorigin />
     <meta name="generator" content={Astro.generator} />
     <title>{`Vincent / ${title}`}</title>
   </head>
@@ -38,19 +39,13 @@ import "../styles/global.css";
       class="fixed top-[45.75rem] left-[45rem] border-pale-grey border-[3px] w-12 h-12 rounded-full -z-10 opacity-70"
     >
     </div>
+    <Menu />
 
     <main class="max-w-screen-sm z-10 mx-auto">
       <div class="h-36 md:h-36"></div>
       <slot />
     </main>
 
-    <div class="h-32"></div>
-
-    <div class="fixed top-6 right-4 lg:right-16 lg:top-1/2 lg:-translate-y-1/2">
-      <ContactIcons client:load />
-    </div>
-
-    <Menu client:load />
     <style is:global>
       .panel {
         box-shadow:

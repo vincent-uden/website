@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/BlogLayout.astro
 title: I hate acrobat
 preview: Acrobat is intrusive, slow and non-customizable. Of course there are alternatives, specifically bad ones...
 date: 15th of October 2025
