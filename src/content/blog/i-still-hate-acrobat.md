@@ -6,13 +6,13 @@ time: "16:00"
 timestamp: 1790704075
 ---
 
-Today marks one year since I posted [I hate acrobat](https://www.uden.dev/blog/pdf-reader) (on Hacker News changed to *Acrobat is intrusive, slow and non-customizable* by the moderators), the de facto release announcement of my PDF reader. I thought it might be interesting to write an article about how maintenance of [[miro-pdf]] has progressed since then.
+Today marks one year since I posted [I hate acrobat](https://www.uden.dev/blog/pdf-reader) (on Hacker News changed to *Acrobat is intrusive, slow and non-customizable* by the moderators), the de facto release announcement of my PDF reader. I thought it might be interesting to write an article about how maintenance of [miro-pdf](https://github.com/vincent-uden/miro) has progressed since then.
 
 ## The talk of the town
 
 My feeds have been filled with a lot of discourse surrounding open source maintenance over the last year painting the whole experience in a negative light. Sloppy contributions, ungrateful users demanding changes for free and burnout. All three of these of course accelerated by [*bullshit generators*](https://www.stallman.org/chatgpt.html) as per the great Richard Stallman (or AI/LLMs/agents to the rest of us).
 
-Since I am depending on [[mupdf]] which is licensed under the [[AGPL-3.0]] I haven't had any choice but to toss my hat into the ring of Free software publishing and maintenance, not that I would have wanted it any other way.
+Since I am depending on [mupdf](https://mupdf.com/) which is licensed under the [AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html) I haven't had any choice but to toss my hat into the ring of Free software publishing and maintenance, not that I would have wanted it any other way.
 
 I can happily report that my experience doesn't match the negative tone of online discourse at all. In fact it's been fun, rewarding and a great learning experience both in regards to programming and product management. The development has been helped along by 14 contributors, which is 13 more than I had ever expected (excluding the obvious *me* from the list). 
 
@@ -38,11 +38,11 @@ In total the repository has 52 issues from people who are not me: 45 closed and 
 
 Many of the input issues stemmed from me going all in on Vim bindings, forgetting the rest of the computing world. 
 
-Among these issues we've managed 3 merged and release contributions upstream to [[mupdf-rs]] with another on the way (which has been merged but not released). This dependency has stuck out like a sore thumb, mostly in the "build error" way as the only non-Rust dependency, but of course the whole project would be impossible without its valuable contribution.
+Among these issues we've managed 3 merged and release contributions upstream to [mupdf-rs](https://github.com/messense/mupdf-rs) with another on the way (which has been merged but not released). This dependency has stuck out like a sore thumb, mostly in the "build error" way as the only non-Rust dependency, but of course the whole project would be impossible without its valuable contribution.
 
-One highlight along the way was getting keybinding suggestions in `#53` from [Wez Furlong](https://github.com/wez) of [[Wezterm]] fame which left me a little starstruck.
+One highlight along the way was getting keybinding suggestions in `#53` from [Wez Furlong](https://github.com/wez) of [Wezterm](https://github.com/wez/wezterm) fame which left me a little starstruck.
 
-Feature requests in regards to UI have ranged from adding buttons to the menu all the way to PDF annotation editing, which is still left unimplemented. I personally don't work much with actual PDFs. Instead they're primarily an output document I compile [[Typst]] or [[LaTeX]] to. Again, the rest of the world, especially [[Assad-AC]] has reminded me that the PDF is actually a format that can benefit from some editing, not just reading.
+Feature requests in regards to UI have ranged from adding buttons to the menu all the way to PDF annotation editing, which is still left unimplemented. I personally don't work much with actual PDFs. Instead they're primarily an output document I compile [Typst](https://typst.app/) or [LaTeX](https://www.latex-project.org/) to. Again, the rest of the world, especially [Assad-AC](https://github.com/Assad-AC) has reminded me that the PDF is actually a format that can benefit from some editing, not just reading.
 
 As one might expect (due to the Rusty source code) we have not had a lot of issues regarding memory safety. That isn't to say we haven't had any. We have had one memory leak due to incorrect key construction for a `HashMap`, which led to render buffers never being dropped. I should stress that this was a shortcoming on my part despite the borrow checker's best efforts. 
 
