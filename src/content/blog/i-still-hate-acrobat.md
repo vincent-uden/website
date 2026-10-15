@@ -2,8 +2,8 @@
 title: I still hate acrobat
 preview: Today marks one year since I posted "I hate acrobat"...
 date: 15th of October 2026
-time: "16:00"
-timestamp: 1790704075
+time: "20:04"
+timestamp: 1792087444
 ---
 
 Today marks one year since I posted [I hate acrobat](https://www.uden.dev/blog/pdf-reader) (on Hacker News changed to *Acrobat is intrusive, slow and non-customizable* by the moderators), the de facto release announcement of my PDF reader. I thought it might be interesting to write an article about how maintenance of [miro-pdf](https://github.com/vincent-uden/miro) has progressed since then.
