@@ -16,7 +16,12 @@ const {
 
 const siteUrl = Astro.site ?? new URL("https://www.uden.dev");
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
-const imageUrl = new URL(image, siteUrl);
+const previewHost =
+  typeof process !== "undefined" && process.env.VERCEL_ENV === "preview"
+    ? process.env.VERCEL_URL
+    : undefined;
+const imageBaseUrl = previewHost ? new URL(`https://${previewHost}`) : siteUrl;
+const imageUrl = new URL(image, imageBaseUrl);
 ---
 
 <Fragment>
