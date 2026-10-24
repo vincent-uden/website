@@ -6,17 +6,11 @@
     <circle cx="912" cy="208" r="38.5" opacity="0.7" />
     <circle cx="744" cy="756" r="22.5" opacity="0.7" />
   </g>
-  <rect x="96" y="151" width="8" height="304" rx="4" fill="#8c9dbf" />
+  <!-- ACCENT_BAR -->
   <g fill="#f1f2f4">
     <!-- TITLE_PATHS -->
   </g>
   <g fill="#d0d3d8">
     <!-- SUBTITLE_PATHS -->
-  </g>
-  <g fill="#aeb2bb">
-    <!-- DESCRIPTION_PATHS -->
-  </g>
-  <g fill="#d0d3d8">
-    <!-- DOMAIN_PATHS -->
   </g>
 </svg>
