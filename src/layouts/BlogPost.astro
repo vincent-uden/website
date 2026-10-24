@@ -6,27 +6,19 @@ const { title, preview, slug, date, time, timestamp } = Astro.props;
 
 import Analytics from "../components/Analytics.astro";
 import Menu from "../components/Menu.astro";
-import Seo from "../components/Seo.astro";
+import SiteHead from "../components/SiteHead.astro";
 import "../styles/markdown_style.css";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <Seo
+    <SiteHead
       title={`Vincent / ${title}`}
       description={preview}
       image={`/social-card/blog/${slug}.png`}
       type="article"
     />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
-    <link rel="icon" type="image/svg+xml" href="/bitmap.svg" />
-    <link rel="preload" href="/font/Geometos.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/font/CenturyGothic.ttf" as="font" type="font/ttf" crossorigin />
-    <meta name="generator" content={Astro.generator} />
-    <title>{`Vincent / ${title}`}</title>
   </head>
   <body class="bg-onyx">
     <div

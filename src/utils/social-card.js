@@ -1,15 +1,19 @@
 import * as fontkit from "fontkit";
+import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
-const titleFont = fontkit.openSync(
-  resolve(process.cwd(), "public/font/Geometos.ttf"),
-);
-const bodyFont = fontkit.openSync(
-  resolve(process.cwd(), "public/font/CenturyGothic.ttf"),
-);
-const template = readFile(resolve(process.cwd(), "src/assets/social-card.svg"), "utf8");
+const moduleProjectRoot = fileURLToPath(new URL("../../", import.meta.url));
+function projectFile(path) {
+  const modulePath = resolve(moduleProjectRoot, path);
+  return existsSync(modulePath) ? modulePath : resolve(process.cwd(), path);
+}
+
+const titleFont = fontkit.openSync(projectFile("public/font/Geometos.ttf"));
+const bodyFont = fontkit.openSync(projectFile("public/font/CenturyGothic.ttf"));
+const template = readFile(projectFile("src/assets/social-card.svg"), "utf8");
 
 const TEXT_X = 140;
 const SUBTITLE_X = 144;
@@ -25,10 +29,12 @@ const MAX_SUBTITLE_LINES = 3;
 
 function measureText(text, font, fontSize) {
   const scale = fontSize / font.unitsPerEm;
-  return font.layout(text).positions.reduce(
-    (width, position) => width + position.xAdvance * scale,
-    0,
-  );
+  return font
+    .layout(text)
+    .positions.reduce(
+      (width, position) => width + position.xAdvance * scale,
+      0,
+    );
 }
 
 function wrapText(text, font, fontSize, maxWidth, maxLines) {
@@ -50,14 +56,12 @@ function wrapText(text, font, fontSize, maxWidth, maxLines) {
 
   const visibleLines = lines.slice(0, maxLines);
   let finalLine = visibleLines[maxLines - 1].replace(/[.…]+$/u, "");
-  while (
-    finalLine &&
-    measureText(`${finalLine}…`, font, fontSize) > maxWidth
-  ) {
+  while (finalLine && measureText(`${finalLine}…`, font, fontSize) > maxWidth) {
     const lastSpace = finalLine.lastIndexOf(" ");
-    finalLine = lastSpace > 0
-      ? finalLine.slice(0, lastSpace)
-      : Array.from(finalLine).slice(0, -1).join("");
+    finalLine =
+      lastSpace > 0
+        ? finalLine.slice(0, lastSpace)
+        : Array.from(finalLine).slice(0, -1).join("");
   }
   visibleLines[maxLines - 1] = `${finalLine}…`;
   return visibleLines;
@@ -105,7 +109,10 @@ export async function generateSocialCard(title, subtitle) {
   const blockTop = BLOCK_CENTER_Y - blockHeight / 2;
   const titleBaselineStart = blockTop + TITLE_SIZE * 0.93;
   const subtitleBaselineStart =
-    blockTop + titleLines.length * TITLE_LINE_HEIGHT + GROUP_GAP + SUBTITLE_SIZE * 1.04;
+    blockTop +
+    titleLines.length * TITLE_LINE_HEIGHT +
+    GROUP_GAP +
+    SUBTITLE_SIZE * 1.04;
   const accentHeight = Math.max(304, blockHeight + 48);
   const accentTop = BLOCK_CENTER_Y - accentHeight / 2;
 
