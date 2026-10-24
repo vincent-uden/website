@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: "website" | "article";
+}
+
+const {
+  title,
+  description =
+    "I'm Vincent Udén, a software developer writing about software, programming, open source, and whatever else I'm currently working on.",
+  image = "/social-card.png",
+  type = "website",
+} = Astro.props;
+
+const siteUrl = Astro.site ?? new URL("https://www.uden.dev");
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+const previewHost =
+  typeof process !== "undefined" && process.env.VERCEL_ENV === "preview"
+    ? process.env.VERCEL_URL
+    : undefined;
+const imageBaseUrl = previewHost ? new URL(`https://${previewHost}`) : siteUrl;
+const imageUrl = new URL(image, imageBaseUrl);
+---
+
+<Fragment>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl.href} />
+  <meta property="og:site_name" content="Vincent Udén" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content={type} />
+  <meta property="og:url" content={canonicalUrl.href} />
+  <meta property="og:image" content={imageUrl.href} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="A dark social card for Vincent Udén" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={imageUrl.href} />
+</Fragment>

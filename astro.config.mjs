@@ -10,7 +10,7 @@ import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://www.uden.dev",
   integrations: [sitemap(), solidJs()],
 
   vite: {
